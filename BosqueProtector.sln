@@ -1,13 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BosqueProtector", "Assembly-CSharp.csproj", "{548708D0-DF72-3E58-2385-4881A2C45CB7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{548708D0-DF72-3E58-2385-4881A2C45CB7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BosqueProtector", "Assembly-CSharp-firstpass.csproj", "{C20A3793-417D-B2FE-4EF4-ED8E3AFBCF32}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-firstpass", "Assembly-CSharp-firstpass.csproj", "{C20A3793-417D-B2FE-4EF4-ED8E3AFBCF32}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BosqueProtector", "Assembly-CSharp-Editor.csproj", "{9828D800-E5B6-8934-E491-468D81E56BE8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-Editor", "Assembly-CSharp-Editor.csproj", "{9828D800-E5B6-8934-E491-468D81E56BE8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BosqueProtector", "Assembly-CSharp-Editor-firstpass.csproj", "{280A612E-E930-0A20-1E91-8EC529F69B0C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-Editor-firstpass", "Assembly-CSharp-Editor-firstpass.csproj", "{280A612E-E930-0A20-1E91-8EC529F69B0C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
