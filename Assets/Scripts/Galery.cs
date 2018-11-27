@@ -17,11 +17,11 @@ public class Galery : MonoBehaviour {
 	}
 
 	void Update () {
-		if (Input.GetKeyUp(KeyCode.RightArrow))
+		if (Input.GetKeyUp(KeyCode.RightArrow) || Input.GetKeyUp("left"))
         {
 			CargarImagen(1);
         }
-        else if (Input.GetKeyUp(KeyCode.LeftArrow))
+        else if (Input.GetKeyUp(KeyCode.LeftArrow) || Input.GetKeyUp("left"))
         {
 			CargarImagen(-1);
         }

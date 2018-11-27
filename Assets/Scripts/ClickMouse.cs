@@ -34,14 +34,14 @@ public class ClickMouse : MonoBehaviour {
 	        Galeria.SetActive(true);
 	        Panel3.SetActive(false);
 	        IsGalery = true;
-	        Pause();
+	        GameObject.FindGameObjectWithTag("Player").GetComponent<FirstPersonController>().enabled = false;
+			Time.timeScale = 0f;
     	}
     }
 
 	void Update()
     {
-		if (Input.GetKeyUp(KeyCode.Q))
-        {
+		if (Input.GetKeyUp(KeyCode.Q)) {
 			Continuar();
         }
         
@@ -58,6 +58,7 @@ public class ClickMouse : MonoBehaviour {
 		Time.timeScale = 1f;
 		GameObject.FindGameObjectWithTag("Player").GetComponent<FirstPersonController>().enabled = true;
 		Cursor.visible = false;
+		Cursor.lockState = CursorLockMode.Locked;
 		Panel.SetActive(false);
 		Panel3.SetActive(true);
 		Galeria.SetActive(false);
