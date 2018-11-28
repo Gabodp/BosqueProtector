@@ -109,6 +109,7 @@
      <Compile Include="Assets\Scripts\Estacion.cs" />
      <Compile Include="Assets\Scripts\Exit.cs" />
      <Compile Include="Assets\Scripts\Galery.cs" />
+     <Compile Include="Assets\Scripts\ImageLoader.cs" />
      <Compile Include="Assets\Scripts\MapManager.cs" />
      <Compile Include="Assets\Scripts\MenuPausa.cs" />
      <Compile Include="Assets\Scripts\MouseController.cs" />

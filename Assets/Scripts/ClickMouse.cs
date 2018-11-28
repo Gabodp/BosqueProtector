@@ -35,6 +35,7 @@ public class ClickMouse : MonoBehaviour {
 	        Panel3.SetActive(false);
 	        IsGalery = true;
 	        GameObject.FindGameObjectWithTag("Player").GetComponent<FirstPersonController>().enabled = false;
+			GameManager.instance.paused = true;
 			Time.timeScale = 0f;
     	}
     }
@@ -52,6 +53,7 @@ public class ClickMouse : MonoBehaviour {
 		Cursor.lockState = CursorLockMode.None;
 		Cursor.visible = true;
 		Time.timeScale = 0f;
+		GameManager.instance.paused = true;
 	}
 	
 	public void Continuar(){
@@ -63,6 +65,7 @@ public class ClickMouse : MonoBehaviour {
 		Panel3.SetActive(true);
 		Galeria.SetActive(false);
 		IsGalery = false;
+		GameManager.instance.paused = false;
 	}
 
 	public bool GetIsGalery() {

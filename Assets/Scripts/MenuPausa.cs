@@ -31,6 +31,7 @@ public class MenuPausa : MonoBehaviour {
 		GameObject.FindGameObjectWithTag("Player").GetComponent<FirstPersonController>().enabled = true;
 		MenuPausaUI.SetActive(false);
 		Panel.SetActive(true);
+		GameManager.instance.paused = false;
 	}
 
 	void Pause(){
@@ -41,6 +42,7 @@ public class MenuPausa : MonoBehaviour {
 		Panel.SetActive(false);
 		Time.timeScale = 0f;
 		IsPaused = true;
+		GameManager.instance.paused = true;
 	}
 
 	public void MenuMapa(){

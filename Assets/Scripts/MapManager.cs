@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using UnityEngine.UI;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System.Runtime.InteropServices;
 using System;
@@ -44,6 +44,8 @@ public class Stations
 public class MapManager : MonoBehaviour {
 	public Character character;
 	public Pin PinInicio;
+	public GameObject PanelEstacion;
+	public GameObject PanelSensor;
 	public Text Estacion;
 	public Text Cargando;
 	public GameObject Panel;
@@ -69,6 +71,8 @@ public class MapManager : MonoBehaviour {
 
 	public void Update(){
 		if (character.IsMoving){
+			PanelEstacion.SetActive(true);
+			PanelSensor.SetActive(true);
 			return;
 		}
 		CheckForInput();
@@ -128,11 +132,6 @@ public class MapManager : MonoBehaviour {
 	                }
 	            }
 
-				foreach (KeyValuePair<int, int> kvp in diccionarioID)
-	            {
-	               	string prueba = "Key = " +  kvp.Key + ", Value =" +kvp.Value;
-	                Debug.Log(prueba);
-	            }
             }
         }
 	}

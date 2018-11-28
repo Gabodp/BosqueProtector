@@ -52146,6 +52146,7 @@ MonoBehaviour:
   spawnArray: []
   currentStation: 0
   scene: 0
+  paused: 0
 --- !u!4 &980018511
 Transform:
   m_ObjectHideFlags: 0
@@ -70216,6 +70217,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   character: {fileID: 209200323}
   PinInicio: {fileID: 2036118876}
+  PanelEstacion: {fileID: 1918646320}
+  PanelSensor: {fileID: 1809967055}
   Estacion: {fileID: 524908498}
   Cargando: {fileID: 1358909993}
   Panel: {fileID: 388388869}
@@ -94184,7 +94187,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1809967056
 RectTransform:
   m_ObjectHideFlags: 0
@@ -98902,7 +98905,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1918646321
 RectTransform:
   m_ObjectHideFlags: 0

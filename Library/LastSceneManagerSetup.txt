@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/GreenForest/Scenes/Bosque.unity
+- path: Assets/Scenes/Mapa.unity
   isLoaded: 1
   isActive: 1
