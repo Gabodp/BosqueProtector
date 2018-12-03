@@ -7,6 +7,7 @@ public class CharacterQuestions : MonoBehaviour
     //Set this in the Inspector
     public Sprite personaje_triste;
     public Sprite personaje_feliz;
+    public Sprite personaje_normal;
 
     void Start()
     {
@@ -15,12 +16,19 @@ public class CharacterQuestions : MonoBehaviour
     }
 
     public void PersonajeTriste() //method to set our first image
-	{
-	 	m_Image.sprite = personaje_triste;
-	}
+    {
+        m_Image.sprite = personaje_triste;
+    }
 
-	public void PersonajeFeliz() //method to set our first image
-	{
-	 	m_Image.sprite = personaje_feliz;
-	}
+    public void PersonajeFeliz() //method to set our first image
+    {
+        m_Image.sprite = personaje_feliz;
+    }
+
+
+    public void PersonajeRestart()
+    {
+        m_Image.sprite = personaje_normal;
+    }
+
 }
