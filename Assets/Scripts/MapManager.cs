@@ -127,12 +127,6 @@ public class MapManager : MonoBehaviour {
 	                    diccionarioNombre.Add(dato.GameStation, dato.Name);
 	                }
 	            }
-
-				foreach (KeyValuePair<int, int> kvp in diccionarioID)
-	            {
-	               	string prueba = "Key = " +  kvp.Key + ", Value =" +kvp.Value;
-	                Debug.Log(prueba);
-	            }
             }
         }
 	}

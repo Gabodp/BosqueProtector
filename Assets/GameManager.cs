@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour {
 	public GameObject[] spawnArray;
 	public int currentStation;
 	public int scene;
+	public bool paused;
 
 	void Awake () {
 		if (instance == null){
