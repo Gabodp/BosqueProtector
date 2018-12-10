@@ -114,6 +114,7 @@
      <Compile Include="Assets\Scripts\Galery.cs" />
      <Compile Include="Assets\Scripts\MapManager.cs" />
      <Compile Include="Assets\Scripts\MenuPausa.cs" />
+     <Compile Include="Assets\Scripts\MouseController.cs" />
      <Compile Include="Assets\Scripts\Pin.cs" />
      <Compile Include="Assets\Scripts\SceneChanger.cs" />
      <Compile Include="Assets\Scripts\SoundManager.cs" />
