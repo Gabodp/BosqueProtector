@@ -2629,7 +2629,7 @@ MonoBehaviour:
   stationText: {fileID: 419226143}
   dialogoPersonaje: {fileID: 1895629047}
   cantidadEstrellas: {fileID: 2050545056}
-  pregunta: {fileID: 0}
+  pregunta: {fileID: 102239760}
   m_opcionA: {fileID: 221152812}
   m_opcionB: {fileID: 1833413163}
   m_opcionC: {fileID: 591750489}
@@ -3644,7 +3644,7 @@ MonoBehaviour:
   stationText: {fileID: 419226143}
   dialogoPersonaje: {fileID: 1895629047}
   cantidadEstrellas: {fileID: 2050545056}
-  pregunta: {fileID: 0}
+  pregunta: {fileID: 2069975940}
   m_opcionA: {fileID: 2071586584}
   m_opcionB: {fileID: 408587212}
   m_opcionC: {fileID: 147695726}
@@ -4561,7 +4561,7 @@ MonoBehaviour:
   stationText: {fileID: 419226143}
   dialogoPersonaje: {fileID: 1895629047}
   cantidadEstrellas: {fileID: 2050545056}
-  pregunta: {fileID: 0}
+  pregunta: {fileID: 450066900}
   m_opcionA: {fileID: 687549530}
   m_opcionB: {fileID: 1617825197}
   m_opcionC: {fileID: 1084564059}
@@ -10078,7 +10078,7 @@ MonoBehaviour:
   stationText: {fileID: 419226143}
   dialogoPersonaje: {fileID: 1895629047}
   cantidadEstrellas: {fileID: 2050545056}
-  pregunta: {fileID: 0}
+  pregunta: {fileID: 280493589}
   m_opcionA: {fileID: 1597539817}
   m_opcionB: {fileID: 1751655407}
   m_opcionC: {fileID: 1570986847}
@@ -14116,7 +14116,7 @@ MonoBehaviour:
   stationText: {fileID: 419226143}
   dialogoPersonaje: {fileID: 1895629047}
   cantidadEstrellas: {fileID: 2050545056}
-  pregunta: {fileID: 0}
+  pregunta: {fileID: 271707027}
   m_opcionA: {fileID: 597807849}
   m_opcionB: {fileID: 1527840803}
   m_opcionC: {fileID: 945178544}
@@ -24840,7 +24840,7 @@ MonoBehaviour:
   stationText: {fileID: 419226143}
   dialogoPersonaje: {fileID: 1895629047}
   cantidadEstrellas: {fileID: 2050545056}
-  pregunta: {fileID: 0}
+  pregunta: {fileID: 1482755200}
   m_opcionA: {fileID: 2016657448}
   m_opcionB: {fileID: 945757569}
   m_opcionC: {fileID: 437067793}

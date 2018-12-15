@@ -125,8 +125,8 @@ public class WallTrigger_2 : MonoBehaviour
     {
         foreach (PreguntaObject root in objectList.preguntas)
         {
-            Debug.Log(id);
-            Debug.Log(root.QuestionId);
+            //Debug.Log(id);
+            //Debug.Log(root.QuestionId);
 
             if (id.Equals(root.QuestionId))
             {
