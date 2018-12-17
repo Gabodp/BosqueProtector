@@ -585,11 +585,6 @@ MonoBehaviour:
   Panel: {fileID: 1270687032}
   Galeria: {fileID: 1004792861}
   Panel3: {fileID: 1474856398}
-  titulo: Iguana
-  cuerpo: "A pesar de su tama\xF1o, pueden moverse velozmente entre las plantas y
-    son excelentes trepadoras."
-  txttitulo: {fileID: 1785202465}
-  txtcuerpo: {fileID: 1571661714}
   ID: 0
 --- !u!1 &60867646
 GameObject:
@@ -1525,12 +1520,7 @@ MonoBehaviour:
   Panel: {fileID: 1270687032}
   Galeria: {fileID: 1004792861}
   Panel3: {fileID: 1474856398}
-  titulo: Teca
-  cuerpo: "Es un \xE1rbol frondoso, se usa para la fabricaci\xF3n de muebles y embarcaciones
-    lujosas."
-  txttitulo: {fileID: 1785202465}
-  txtcuerpo: {fileID: 1571661714}
-  ID: 0
+  ID: 1
 --- !u!65 &163940824
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2753,11 +2743,6 @@ MonoBehaviour:
   Panel: {fileID: 1270687032}
   Galeria: {fileID: 1004792861}
   Panel3: {fileID: 1474856398}
-  titulo: Pechiche
-  cuerpo: "Su nombre cient\xEDfico es Vitex gigantea Kunth es un arbol que llega a
-    medir 20 m. de alto."
-  txttitulo: {fileID: 1785202465}
-  txtcuerpo: {fileID: 1571661714}
   ID: 0
 --- !u!65 &248503651
 BoxCollider:
@@ -3132,11 +3117,6 @@ MonoBehaviour:
   Panel: {fileID: 1270687032}
   Galeria: {fileID: 1004792861}
   Panel3: {fileID: 1474856398}
-  titulo: "Fernan S\xE1nchez"
-  cuerpo: "Ampliamente distribuido en bosques h\xFAmedos, incluyendo llanuras de r\xEDos
-    y bosques secos."
-  txttitulo: {fileID: 1785202465}
-  txtcuerpo: {fileID: 1571661714}
   ID: 0
 --- !u!65 &262853682
 BoxCollider:
@@ -3773,11 +3753,6 @@ MonoBehaviour:
   Panel: {fileID: 1270687032}
   Galeria: {fileID: 1004792861}
   Panel3: {fileID: 1474856398}
-  titulo: Bototillo
-  cuerpo: "La floraci\xF3n del \xE1rbol Bototillo es de un amarillo intenso, dura
-    de 3 a 4 semanas."
-  txttitulo: {fileID: 1785202465}
-  txtcuerpo: {fileID: 1571661714}
   ID: 0
 --- !u!65 &307964100
 BoxCollider:
@@ -4247,11 +4222,6 @@ MonoBehaviour:
   Panel: {fileID: 1270687032}
   Galeria: {fileID: 1004792861}
   Panel3: {fileID: 1474856398}
-  titulo: "Fernan S\xE1nchez"
-  cuerpo: "Ampliamente distribuido en bosques h\xFAmedos, incluyendo llanuras de r\xEDos
-    y bosques secos."
-  txttitulo: {fileID: 1785202465}
-  txtcuerpo: {fileID: 1571661714}
   ID: 0
 --- !u!114 &335555044
 MonoBehaviour:
@@ -4644,11 +4614,6 @@ MonoBehaviour:
   Panel: {fileID: 1270687032}
   Galeria: {fileID: 1004792861}
   Panel3: {fileID: 1474856398}
-  titulo: Ardilla
-  cuerpo: "La ardilla es un mam\xEDfero roedor. Mide entre 35 y 45 cm de longitud,
-    de las que casi la mitad pertenecen a la cola."
-  txttitulo: {fileID: 1785202465}
-  txtcuerpo: {fileID: 1571661714}
   ID: 0
 --- !u!65 &342611876
 BoxCollider:
@@ -5734,10 +5699,6 @@ MonoBehaviour:
   Panel: {fileID: 1270687032}
   Galeria: {fileID: 1004792861}
   Panel3: {fileID: 1474856398}
-  titulo: Guasmo
-  cuerpo: "Es un \xE1rbol de porte bajo con hojas simples y produce flores peque\xF1as. "
-  txttitulo: {fileID: 1785202465}
-  txtcuerpo: {fileID: 1571661714}
   ID: 0
 --- !u!65 &465351783
 BoxCollider:
@@ -5849,11 +5810,6 @@ MonoBehaviour:
   Panel: {fileID: 1270687032}
   Galeria: {fileID: 1004792861}
   Panel3: {fileID: 1474856398}
-  titulo: Bototillo
-  cuerpo: "La floraci\xF3n del \xE1rbol Bototillo es de un amarillo intenso, dura
-    de 3 a 4 semanas."
-  txttitulo: {fileID: 1785202465}
-  txtcuerpo: {fileID: 1571661714}
   ID: 0
 --- !u!114 &492060380
 MonoBehaviour:
@@ -8446,11 +8402,6 @@ MonoBehaviour:
   Panel: {fileID: 1270687032}
   Galeria: {fileID: 1004792861}
   Panel3: {fileID: 1474856398}
-  titulo: Pechiche
-  cuerpo: "Su nombre cient\xEDfico es Vitex gigantea Kunth es un arbol que llega a
-    medir 20 m. de alto."
-  txttitulo: {fileID: 1785202465}
-  txtcuerpo: {fileID: 1571661714}
   ID: 0
 --- !u!114 &780551934
 MonoBehaviour:
@@ -8540,11 +8491,6 @@ MonoBehaviour:
   Panel: {fileID: 1270687032}
   Galeria: {fileID: 1004792861}
   Panel3: {fileID: 1474856398}
-  titulo: Iguana
-  cuerpo: "A pesar de su tama\xF1o, pueden moverse velozmente entre las plantas y
-    son excelentes trepadoras."
-  txttitulo: {fileID: 1785202465}
-  txtcuerpo: {fileID: 1571661714}
   ID: 0
 --- !u!1 &808370957
 GameObject:
@@ -10695,8 +10641,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1004792865}
   - component: {fileID: 1004792864}
-  - component: {fileID: 1004792863}
   - component: {fileID: 1004792862}
+  - component: {fileID: 1004792863}
   m_Layer: 0
   m_Name: Galeria
   m_TagString: Untagged
@@ -10715,13 +10661,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a8192b7e5c6c1e4f9d79a8adad50afb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  info_url: http://200.126.14.250/api/bpv/specie/
+  image_url: http://200.126.14.250/api/bpv/specie/
+  treeID: 1
+  titulo: {fileID: 1785202465}
+  cuerpo: {fileID: 1571661714}
   imagenes:
   - {fileID: 21300000, guid: 18e38e16558f6684786e0e62b01f8827, type: 3}
   - {fileID: 21300000, guid: 26d3675e0a7d8bd41a8740b6a95964c5, type: 3}
   - {fileID: 21300000, guid: 156a273b742fa044eabe6d027715a17e, type: 3}
   - {fileID: 21300000, guid: f1b0c022a5054d74e97fbef5e90dcfb0, type: 3}
   imagenActual: 0
-  imagen: {fileID: 1004792861}
+  imagen: {fileID: 1004792863}
 --- !u!114 &1004792863
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10730,7 +10681,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1004792861}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Script: {fileID: -98529514, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
@@ -10741,14 +10692,13 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
+  m_Texture: {fileID: 0}
+  m_UVRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
 --- !u!222 &1004792864
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -12088,10 +12038,6 @@ MonoBehaviour:
   Panel: {fileID: 1270687032}
   Galeria: {fileID: 1004792861}
   Panel3: {fileID: 1474856398}
-  titulo: Ceibo
-  cuerpo: Es una especie nativa de la tierra latinoamericana
-  txttitulo: {fileID: 1785202465}
-  txtcuerpo: {fileID: 1571661714}
   ID: 0
 --- !u!122 &1106411407
 Halo:
@@ -12661,11 +12607,6 @@ MonoBehaviour:
   Panel: {fileID: 1270687032}
   Galeria: {fileID: 1004792861}
   Panel3: {fileID: 1474856398}
-  titulo: Tangara Azul y Gris
-  cuerpo: Esta hermosa ave que se alimenta principalmente de frutos lleva el nombre
-    Tangara Azuleja por el color de su plumaje.
-  txttitulo: {fileID: 1785202465}
-  txtcuerpo: {fileID: 1571661714}
   ID: 0
 --- !u!65 &1137752019
 BoxCollider:
@@ -13016,11 +12957,6 @@ MonoBehaviour:
   Panel: {fileID: 1270687032}
   Galeria: {fileID: 1004792861}
   Panel3: {fileID: 1474856398}
-  titulo: Tangara Azul y Gris
-  cuerpo: Esta hermosa ave que se alimenta principalmente de frutos lleva el nombre
-    Tangara Azuleja por el color de su plumaje.
-  txttitulo: {fileID: 1785202465}
-  txtcuerpo: {fileID: 1571661714}
   ID: 0
 --- !u!65 &1157793715
 BoxCollider:
@@ -13521,11 +13457,6 @@ MonoBehaviour:
   Panel: {fileID: 1270687032}
   Galeria: {fileID: 1004792861}
   Panel3: {fileID: 1474856398}
-  titulo: Teca
-  cuerpo: "Es un \xE1rbol frondoso, se usa para la fabricaci\xF3n de muebles y embarcaciones
-    lujosas."
-  txttitulo: {fileID: 1785202465}
-  txtcuerpo: {fileID: 1571661714}
   ID: 0
 --- !u!65 &1234430826
 BoxCollider:
@@ -14211,11 +14142,6 @@ MonoBehaviour:
   Panel: {fileID: 1270687032}
   Galeria: {fileID: 1004792861}
   Panel3: {fileID: 1474856398}
-  titulo: Garcilla Estriada
-  cuerpo: "Es una especie de tama\xF1o mediano, caza de pie o en cuclillas, normalmente
-    es algo solitaria."
-  txttitulo: {fileID: 1785202465}
-  txtcuerpo: {fileID: 1571661714}
   ID: 0
 --- !u!1 &1305815320
 GameObject:
@@ -14813,11 +14739,6 @@ MonoBehaviour:
   Panel: {fileID: 1270687032}
   Galeria: {fileID: 1004792861}
   Panel3: {fileID: 1474856398}
-  titulo: "Momoto Grit\xF3n"
-  cuerpo: Suele permanecer perchado mientras analiza sus alrededores realizando un
-    movimiento pendular de la cola.
-  txttitulo: {fileID: 1785202465}
-  txtcuerpo: {fileID: 1571661714}
   ID: 0
 --- !u!65 &1364096186
 BoxCollider:
@@ -14940,11 +14861,6 @@ MonoBehaviour:
   Panel: {fileID: 1270687032}
   Galeria: {fileID: 1004792861}
   Panel3: {fileID: 1474856398}
-  titulo: Garcilla Estriada
-  cuerpo: "Es una especie de tama\xF1o mediano, caza de pie o en cuclillas, normalmente
-    es algo solitaria."
-  txttitulo: {fileID: 1785202465}
-  txtcuerpo: {fileID: 1571661714}
   ID: 0
 --- !u!65 &1376719936
 BoxCollider:
@@ -15418,11 +15334,6 @@ MonoBehaviour:
   Panel: {fileID: 1270687032}
   Galeria: {fileID: 1004792861}
   Panel3: {fileID: 1474856398}
-  titulo: "Pinz\xF3n Sabanero Azafranado"
-  cuerpo: "Miden 14 cm. Se alimentan de granos y semillas que encuentran en el suelo.
-    Construyen nidos en \xE1rboles aislados."
-  txttitulo: {fileID: 1785202465}
-  txtcuerpo: {fileID: 1571661714}
   ID: 0
 --- !u!65 &1380541331
 BoxCollider:
@@ -15919,11 +15830,6 @@ MonoBehaviour:
   Panel: {fileID: 1270687032}
   Galeria: {fileID: 1004792861}
   Panel3: {fileID: 1474856398}
-  titulo: Garcilla Estriada
-  cuerpo: "Es una especie de tama\xF1o mediano, caza de pie o en cuclillas, normalmente
-    es algo solitaria."
-  txttitulo: {fileID: 1785202465}
-  txtcuerpo: {fileID: 1571661714}
   ID: 0
 --- !u!65 &1438565694
 BoxCollider:
@@ -16670,11 +16576,6 @@ MonoBehaviour:
   Panel: {fileID: 1270687032}
   Galeria: {fileID: 1004792861}
   Panel3: {fileID: 1474856398}
-  titulo: Garrapatero Piquiestriado
-  cuerpo: Su plumaje es completamente negro con tonos azules y tiene el pico aplastado
-    a los lados con ranuras alargadas, muy marcadas.
-  txttitulo: {fileID: 1785202465}
-  txtcuerpo: {fileID: 1571661714}
   ID: 0
 --- !u!65 &1486532059
 BoxCollider:
@@ -17261,12 +17162,6 @@ MonoBehaviour:
   Panel: {fileID: 1270687032}
   Galeria: {fileID: 1004792861}
   Panel3: {fileID: 1474856398}
-  titulo: Mosquero Rayado
-  cuerpo: "Hallado s\xF3lo o en pareja, generalmente ruidoso y conspicuo. Persigue
-    una gran variedad de insectos, algunos capturados mediante vaivenes a\xE9reos.
-    Tambi\xE9n se alimenta de fruta."
-  txttitulo: {fileID: 1785202465}
-  txtcuerpo: {fileID: 1571661714}
   ID: 0
 --- !u!65 &1497109514
 BoxCollider:
@@ -19866,11 +19761,6 @@ MonoBehaviour:
   Panel: {fileID: 1270687032}
   Galeria: {fileID: 1004792861}
   Panel3: {fileID: 1474856398}
-  titulo: "Gavil\xE1n Gris"
-  cuerpo: Se alimenta de una variedad de presas, generalmente desde su percha. Planea,
-    por poco tiempo y poca altura.
-  txttitulo: {fileID: 1785202465}
-  txtcuerpo: {fileID: 1571661714}
   ID: 0
 --- !u!65 &1748338975
 BoxCollider:
@@ -20095,11 +19985,6 @@ MonoBehaviour:
   Panel: {fileID: 1270687032}
   Galeria: {fileID: 1004792861}
   Panel3: {fileID: 1474856398}
-  titulo: Teca
-  cuerpo: "Es un \xE1rbol frondoso, se usa para la fabricaci\xF3n de muebles y embarcaciones
-    lujosas."
-  txttitulo: {fileID: 1785202465}
-  txtcuerpo: {fileID: 1571661714}
   ID: 0
 --- !u!114 &1767110424
 MonoBehaviour:
@@ -20184,11 +20069,6 @@ MonoBehaviour:
   Panel: {fileID: 1270687032}
   Galeria: {fileID: 1004792861}
   Panel3: {fileID: 1474856398}
-  titulo: "B\xFAho Blanquinegro"
-  cuerpo: "Activo \xFAnicamente por la noche, duerme bajo frondoso arboledo, a menudo
-    en ramas expuestas a gran altura del suelo. "
-  txttitulo: {fileID: 1785202465}
-  txtcuerpo: {fileID: 1571661714}
   ID: 0
 --- !u!65 &1768288171
 BoxCollider:
@@ -20987,11 +20867,6 @@ MonoBehaviour:
   Panel: {fileID: 1270687032}
   Galeria: {fileID: 1004792861}
   Panel3: {fileID: 1474856398}
-  titulo: Tirano Tropical
-  cuerpo: "Se alimenta principalmente de insectos que capturan con sus vaivenes a\xE9reos,
-    tambi\xE9n consume fruta."
-  txttitulo: {fileID: 1785202465}
-  txtcuerpo: {fileID: 1571661714}
   ID: 0
 --- !u!65 &1831582904
 BoxCollider:
@@ -21340,11 +21215,6 @@ MonoBehaviour:
   Panel: {fileID: 1270687032}
   Galeria: {fileID: 1004792861}
   Panel3: {fileID: 1474856398}
-  titulo: "Cabez\xF3n Unicolor"
-  cuerpo: A menudo en parejas, regularmente yergue las plumas coronarias para formar
-    una cresta redonda y esponjosa mientras cabecea alertantemente.
-  txttitulo: {fileID: 1785202465}
-  txtcuerpo: {fileID: 1571661714}
   ID: 0
 --- !u!65 &1858380414
 BoxCollider:
@@ -21962,11 +21832,6 @@ MonoBehaviour:
   Panel: {fileID: 1270687032}
   Galeria: {fileID: 1004792861}
   Panel3: {fileID: 1474856398}
-  titulo: Teca
-  cuerpo: "Es un \xE1rbol frondoso, se usa para la fabricaci\xF3n de muebles y embarcaciones
-    lujosas."
-  txttitulo: {fileID: 1785202465}
-  txtcuerpo: {fileID: 1571661714}
   ID: 0
 --- !u!65 &1885899708
 BoxCollider:
@@ -22015,11 +21880,6 @@ MonoBehaviour:
   Panel: {fileID: 1270687032}
   Galeria: {fileID: 1004792861}
   Panel3: {fileID: 1474856398}
-  titulo: Pechiche
-  cuerpo: "Su nombre cient\xEDfico es Vitex gigantea Kunth es un arbol que llega a
-    medir 20 m. de alto."
-  txttitulo: {fileID: 1785202465}
-  txtcuerpo: {fileID: 1571661714}
   ID: 0
 --- !u!114 &1892831668
 MonoBehaviour:
@@ -22345,10 +22205,6 @@ MonoBehaviour:
   Panel: {fileID: 1270687032}
   Galeria: {fileID: 1004792861}
   Panel3: {fileID: 1474856398}
-  titulo: Ceibo
-  cuerpo: Es una especie nativa de la tierra latinoamericana
-  txttitulo: {fileID: 1785202465}
-  txtcuerpo: {fileID: 1571661714}
   ID: 0
 --- !u!114 &1900895456
 MonoBehaviour:
@@ -22520,11 +22376,6 @@ MonoBehaviour:
   Panel: {fileID: 1270687032}
   Galeria: {fileID: 1004792861}
   Panel3: {fileID: 1474856398}
-  titulo: "Gavil\xE1n Dorsigris"
-  cuerpo: Posa al descubierto al filo del bosque, planea con regularidad, manteniendo
-    alas planas y cola en abanico, es mansa con respecto a otros rapaces.
-  txttitulo: {fileID: 1785202465}
-  txtcuerpo: {fileID: 1571661714}
   ID: 0
 --- !u!65 &1903078084
 BoxCollider:
@@ -22767,11 +22618,6 @@ MonoBehaviour:
   Panel: {fileID: 1270687032}
   Galeria: {fileID: 1004792861}
   Panel3: {fileID: 1474856398}
-  titulo: Iguana
-  cuerpo: "A pesar de su tama\xF1o, pueden moverse velozmente entre las plantas y
-    son excelentes trepadoras."
-  txttitulo: {fileID: 1785202465}
-  txtcuerpo: {fileID: 1571661714}
   ID: 0
 --- !u!4 &1945174811 stripped
 Transform:
@@ -22843,10 +22689,6 @@ MonoBehaviour:
   Panel: {fileID: 1270687032}
   Galeria: {fileID: 1004792861}
   Panel3: {fileID: 1474856398}
-  titulo: Ceibo
-  cuerpo: Es una especie nativa de la tierra latinoamericana
-  txttitulo: {fileID: 1785202465}
-  txtcuerpo: {fileID: 1571661714}
   ID: 0
 --- !u!65 &1947808899
 BoxCollider:
@@ -24062,10 +23904,6 @@ MonoBehaviour:
   Panel: {fileID: 1270687032}
   Galeria: {fileID: 1004792861}
   Panel3: {fileID: 1474856398}
-  titulo: Guasmo
-  cuerpo: "Es un \xE1rbol de porte bajo con hojas simples y produce flores peque\xF1as. "
-  txttitulo: {fileID: 1785202465}
-  txtcuerpo: {fileID: 1571661714}
   ID: 0
 --- !u!114 &2042574855
 MonoBehaviour:
@@ -24213,10 +24051,6 @@ MonoBehaviour:
   Panel: {fileID: 1270687032}
   Galeria: {fileID: 1004792861}
   Panel3: {fileID: 1474856398}
-  titulo: Ceibo
-  cuerpo: Es una especie nativa de la tierra latinoamericana
-  txttitulo: {fileID: 1785202465}
-  txtcuerpo: {fileID: 1571661714}
   ID: 0
 --- !u!114 &2046840690
 MonoBehaviour:
@@ -24740,10 +24574,6 @@ MonoBehaviour:
   Panel: {fileID: 1270687032}
   Galeria: {fileID: 1004792861}
   Panel3: {fileID: 1474856398}
-  titulo: Ceibo
-  cuerpo: Es una especie nativa de la tierra latinoamericana
-  txttitulo: {fileID: 1785202465}
-  txtcuerpo: {fileID: 1571661714}
   ID: 0
 --- !u!65 &2095049843
 BoxCollider:
@@ -25241,11 +25071,6 @@ MonoBehaviour:
   Panel: {fileID: 1270687032}
   Galeria: {fileID: 1004792861}
   Panel3: {fileID: 1474856398}
-  titulo: Garrapatero Piquiestriado
-  cuerpo: Su plumaje es completamente negro con tonos azules y tiene el pico aplastado
-    a los lados con ranuras alargadas, muy marcadas.
-  txttitulo: {fileID: 1785202465}
-  txtcuerpo: {fileID: 1571661714}
   ID: 0
 --- !u!65 &2115642754
 BoxCollider:

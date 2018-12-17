@@ -14,12 +14,6 @@ public class ClickMouse : MonoBehaviour {
 	public GameObject Galeria;
 	public GameObject Panel3;
 	public static bool IsGalery = false;
-
-	public string titulo;
-	public string cuerpo;
-	public Text txttitulo;
-	public Text txtcuerpo;
-
 	public int ID;
 
 
@@ -27,14 +21,12 @@ public class ClickMouse : MonoBehaviour {
 		Panel.SetActive(false);		
 	}
 
-    void OnMouseDown ()
-    {
+    void OnMouseDown () {
     	if (MenuPausa.IsPaused == false) {
-	    	txttitulo.GetComponent<Text>().text = titulo;
-	    	txtcuerpo.GetComponent<Text>().text = cuerpo;
 	        Panel.SetActive(true);
 	        Galeria.SetActive(true);
 	        Panel3.SetActive(false);
+			Galeria.GetComponent<Galery>().treeID = ID;
 	        IsGalery = true;
 	        GameObject.FindGameObjectWithTag("Player").GetComponent<FirstPersonController>().enabled = false;
 			GameManager.instance.paused = true;

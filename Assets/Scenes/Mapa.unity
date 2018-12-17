@@ -52831,6 +52831,7 @@ MonoBehaviour:
   spawnArray: []
   currentStation: 0
   scene: 0
+  paused: 0
 --- !u!4 &980018511
 Transform:
   m_ObjectHideFlags: 0
