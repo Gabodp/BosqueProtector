@@ -14,8 +14,7 @@ public class ClickMouse : MonoBehaviour {
 	public GameObject Galeria;
 	public GameObject Panel3;
 	public static bool IsGalery = false;
-	public int ID;
-
+	public string name;
 
 	void Start () {
 		Panel.SetActive(false);		
@@ -26,7 +25,7 @@ public class ClickMouse : MonoBehaviour {
 	        Panel.SetActive(true);
 	        Galeria.SetActive(true);
 	        Panel3.SetActive(false);
-			Galeria.GetComponent<Galery>().treeID = ID;
+			Galeria.GetComponent<Galery>().name = name;
 	        IsGalery = true;
 	        GameObject.FindGameObjectWithTag("Player").GetComponent<FirstPersonController>().enabled = false;
 			GameManager.instance.paused = true;

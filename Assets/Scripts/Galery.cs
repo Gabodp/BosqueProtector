@@ -50,7 +50,7 @@ public class Galery : MonoBehaviour {
 
 	public IEnumerator CargarInfo() {
 
-		UnityWebRequest www = UnityWebRequest.Get(info_url + treeID + "/");
+		UnityWebRequest www = UnityWebRequest.Get(info_url + name);
 		yield return www.SendWebRequest();
 
 		if (www.isNetworkError || www.isHttpError) {
@@ -70,7 +70,7 @@ public class Galery : MonoBehaviour {
 	}
 
 	public IEnumerator LoadImage(int id) {
-		WWW wwwLoader = new WWW(image_url + treeID + "/gallery/" + id + "/");
+		WWW wwwLoader = new WWW(image_url + tree.Id + "/gallery/" + id + "/");
 		Debug.Log(image_url + treeID + "/gallery/" + id + "/");
 		yield return wwwLoader;
 
