@@ -17,14 +17,14 @@ public class Galery : MonoBehaviour {
 	public RawImage imagen;
 
 	private Arbol tree = null;
-
-
-	// Use this for initialization
-	void Start () {
-		StartCoroutine(CargarInfo());
-	}
+	public bool visible;
 
 	void Update () {
+		if (visible) {
+			StartCoroutine(CargarInfo());
+			visible = false;
+		}
+
 		if (Input.GetKeyUp(KeyCode.RightArrow) || Input.GetKeyUp(KeyCode.A))
         {
 			CargarImagen(1);
@@ -51,6 +51,7 @@ public class Galery : MonoBehaviour {
 	public IEnumerator CargarInfo() {
 
 		UnityWebRequest www = UnityWebRequest.Get(info_url + name);
+		Debug.Log("URL de la info:" + info_url + name);
 		yield return www.SendWebRequest();
 
 		if (www.isNetworkError || www.isHttpError) {
@@ -65,13 +66,12 @@ public class Galery : MonoBehaviour {
 		}
 
 		titulo.text = tree.Name;
-		Debug.Log(tree.Gallery.Length);
 		CargarImagen(0);
 	}
 
 	public IEnumerator LoadImage(int id) {
 		WWW wwwLoader = new WWW(image_url + tree.Id + "/gallery/" + id + "/");
-		Debug.Log(image_url + treeID + "/gallery/" + id + "/");
+		Debug.Log("URL de la imagen: " + image_url + treeID + "/gallery/" + id + "/");
 		yield return wwwLoader;
 
 		imagen.texture = wwwLoader.texture;

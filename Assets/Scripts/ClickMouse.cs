@@ -12,12 +12,14 @@ public class ClickMouse : MonoBehaviour {
 
 	public GameObject Panel;
 	public GameObject Galeria;
+	private Galery GaleryScript;
 	public GameObject Panel3;
 	public static bool IsGalery = false;
-	public string name;
+	public string specieName;
 
 	void Start () {
-		Panel.SetActive(false);		
+		Panel.SetActive(false);	
+		GaleryScript = Galeria.GetComponent<Galery>();	
 	}
 
     void OnMouseDown () {
@@ -25,7 +27,8 @@ public class ClickMouse : MonoBehaviour {
 	        Panel.SetActive(true);
 	        Galeria.SetActive(true);
 	        Panel3.SetActive(false);
-			Galeria.GetComponent<Galery>().name = name;
+			GaleryScript.name = specieName;
+			GaleryScript.visible = true;
 	        IsGalery = true;
 	        GameObject.FindGameObjectWithTag("Player").GetComponent<FirstPersonController>().enabled = false;
 			GameManager.instance.paused = true;
@@ -53,6 +56,7 @@ public class ClickMouse : MonoBehaviour {
 	public void Continuar(){
 		Time.timeScale = 1f;
 		GameObject.FindGameObjectWithTag("Player").GetComponent<FirstPersonController>().enabled = true;
+		Galeria.GetComponent<Galery>().visible=false;
 		Cursor.visible = false;
 		Cursor.lockState = CursorLockMode.Locked;
 		Panel.SetActive(false);

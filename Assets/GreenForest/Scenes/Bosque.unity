@@ -585,7 +585,7 @@ MonoBehaviour:
   Panel: {fileID: 1270687032}
   Galeria: {fileID: 1004792861}
   Panel3: {fileID: 1474856398}
-  name: Iguana
+  specieName: Iguana
 --- !u!1 &60867646
 GameObject:
   m_ObjectHideFlags: 0
@@ -1520,7 +1520,7 @@ MonoBehaviour:
   Panel: {fileID: 1270687032}
   Galeria: {fileID: 1004792861}
   Panel3: {fileID: 1474856398}
-  name: Teca
+  specieName: Teca
 --- !u!65 &163940824
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2743,7 +2743,7 @@ MonoBehaviour:
   Panel: {fileID: 1270687032}
   Galeria: {fileID: 1004792861}
   Panel3: {fileID: 1474856398}
-  name: Pechinche
+  specieName: Pechiche
 --- !u!65 &248503651
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3117,7 +3117,7 @@ MonoBehaviour:
   Panel: {fileID: 1270687032}
   Galeria: {fileID: 1004792861}
   Panel3: {fileID: 1474856398}
-  name: FernanSanchez
+  specieName: Fernan
 --- !u!65 &262853682
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3753,7 +3753,7 @@ MonoBehaviour:
   Panel: {fileID: 1270687032}
   Galeria: {fileID: 1004792861}
   Panel3: {fileID: 1474856398}
-  name: Botolillo
+  specieName: Bototillo
 --- !u!65 &307964100
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4222,7 +4222,7 @@ MonoBehaviour:
   Panel: {fileID: 1270687032}
   Galeria: {fileID: 1004792861}
   Panel3: {fileID: 1474856398}
-  name: FernanSanchez
+  specieName: Fernan
 --- !u!114 &335555044
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4614,7 +4614,7 @@ MonoBehaviour:
   Panel: {fileID: 1270687032}
   Galeria: {fileID: 1004792861}
   Panel3: {fileID: 1474856398}
-  name: Ardilla
+  specieName: Ardilla
 --- !u!65 &342611876
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5699,7 +5699,7 @@ MonoBehaviour:
   Panel: {fileID: 1270687032}
   Galeria: {fileID: 1004792861}
   Panel3: {fileID: 1474856398}
-  name: Guasmo
+  specieName: Guasmo
 --- !u!65 &465351783
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5810,7 +5810,7 @@ MonoBehaviour:
   Panel: {fileID: 1270687032}
   Galeria: {fileID: 1004792861}
   Panel3: {fileID: 1474856398}
-  name: Bototillo
+  specieName: Bototillo
 --- !u!114 &492060380
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8402,7 +8402,7 @@ MonoBehaviour:
   Panel: {fileID: 1270687032}
   Galeria: {fileID: 1004792861}
   Panel3: {fileID: 1474856398}
-  name: Pechiche
+  specieName: Pechiche
 --- !u!114 &780551934
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8491,7 +8491,7 @@ MonoBehaviour:
   Panel: {fileID: 1270687032}
   Galeria: {fileID: 1004792861}
   Panel3: {fileID: 1474856398}
-  name: Iguana
+  specieName: Iguana
 --- !u!1 &808370957
 GameObject:
   m_ObjectHideFlags: 0
@@ -10673,6 +10673,7 @@ MonoBehaviour:
   - {fileID: 0}
   imagenActual: 0
   imagen: {fileID: 1004792863}
+  visible: 0
 --- !u!114 &1004792863
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12038,7 +12039,7 @@ MonoBehaviour:
   Panel: {fileID: 1270687032}
   Galeria: {fileID: 1004792861}
   Panel3: {fileID: 1474856398}
-  name: Ceibo
+  specieName: Ceibo
 --- !u!122 &1106411407
 Halo:
   m_ObjectHideFlags: 0
@@ -12607,7 +12608,7 @@ MonoBehaviour:
   Panel: {fileID: 1270687032}
   Galeria: {fileID: 1004792861}
   Panel3: {fileID: 1474856398}
-  name: 
+  specieName: 
 --- !u!65 &1137752019
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12957,7 +12958,7 @@ MonoBehaviour:
   Panel: {fileID: 1270687032}
   Galeria: {fileID: 1004792861}
   Panel3: {fileID: 1474856398}
-  name: 
+  specieName: 
 --- !u!65 &1157793715
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13457,7 +13458,7 @@ MonoBehaviour:
   Panel: {fileID: 1270687032}
   Galeria: {fileID: 1004792861}
   Panel3: {fileID: 1474856398}
-  name: Teca
+  specieName: Teca
 --- !u!65 &1234430826
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14142,7 +14143,7 @@ MonoBehaviour:
   Panel: {fileID: 1270687032}
   Galeria: {fileID: 1004792861}
   Panel3: {fileID: 1474856398}
-  name: 
+  specieName: 
 --- !u!1 &1305815320
 GameObject:
   m_ObjectHideFlags: 0
@@ -14739,7 +14740,7 @@ MonoBehaviour:
   Panel: {fileID: 1270687032}
   Galeria: {fileID: 1004792861}
   Panel3: {fileID: 1474856398}
-  name: 
+  specieName: 
 --- !u!65 &1364096186
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14861,7 +14862,7 @@ MonoBehaviour:
   Panel: {fileID: 1270687032}
   Galeria: {fileID: 1004792861}
   Panel3: {fileID: 1474856398}
-  name: 
+  specieName: 
 --- !u!65 &1376719936
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15334,7 +15335,7 @@ MonoBehaviour:
   Panel: {fileID: 1270687032}
   Galeria: {fileID: 1004792861}
   Panel3: {fileID: 1474856398}
-  name: 
+  specieName: "Pinz\xF3n Sabanero Azafranado"
 --- !u!65 &1380541331
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15830,7 +15831,7 @@ MonoBehaviour:
   Panel: {fileID: 1270687032}
   Galeria: {fileID: 1004792861}
   Panel3: {fileID: 1474856398}
-  name: 
+  specieName: 
 --- !u!65 &1438565694
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16576,7 +16577,7 @@ MonoBehaviour:
   Panel: {fileID: 1270687032}
   Galeria: {fileID: 1004792861}
   Panel3: {fileID: 1474856398}
-  name: 
+  specieName: 
 --- !u!65 &1486532059
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17162,7 +17163,7 @@ MonoBehaviour:
   Panel: {fileID: 1270687032}
   Galeria: {fileID: 1004792861}
   Panel3: {fileID: 1474856398}
-  name: 
+  specieName: 
 --- !u!65 &1497109514
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19361,7 +19362,9 @@ Prefab:
       propertyPath: m_Height
       value: 0.8
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 11455332, guid: b4806bcfd71324778b360c0299195b34, type: 2}
+    - {fileID: 11458590, guid: b4806bcfd71324778b360c0299195b34, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: b4806bcfd71324778b360c0299195b34, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1 &1693465334
@@ -19761,7 +19764,7 @@ MonoBehaviour:
   Panel: {fileID: 1270687032}
   Galeria: {fileID: 1004792861}
   Panel3: {fileID: 1474856398}
-  name: 
+  specieName: 
 --- !u!65 &1748338975
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19985,7 +19988,7 @@ MonoBehaviour:
   Panel: {fileID: 1270687032}
   Galeria: {fileID: 1004792861}
   Panel3: {fileID: 1474856398}
-  name: Teca
+  specieName: Teca
 --- !u!114 &1767110424
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20069,7 +20072,7 @@ MonoBehaviour:
   Panel: {fileID: 1270687032}
   Galeria: {fileID: 1004792861}
   Panel3: {fileID: 1474856398}
-  name: 
+  specieName: 
 --- !u!65 &1768288171
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20867,7 +20870,7 @@ MonoBehaviour:
   Panel: {fileID: 1270687032}
   Galeria: {fileID: 1004792861}
   Panel3: {fileID: 1474856398}
-  name: 
+  specieName: 
 --- !u!65 &1831582904
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21215,7 +21218,7 @@ MonoBehaviour:
   Panel: {fileID: 1270687032}
   Galeria: {fileID: 1004792861}
   Panel3: {fileID: 1474856398}
-  name: 
+  specieName: 
 --- !u!65 &1858380414
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21832,7 +21835,7 @@ MonoBehaviour:
   Panel: {fileID: 1270687032}
   Galeria: {fileID: 1004792861}
   Panel3: {fileID: 1474856398}
-  name: Teca
+  specieName: Teca
 --- !u!65 &1885899708
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21880,7 +21883,7 @@ MonoBehaviour:
   Panel: {fileID: 1270687032}
   Galeria: {fileID: 1004792861}
   Panel3: {fileID: 1474856398}
-  name: Pechiche
+  specieName: Pechiche
 --- !u!114 &1892831668
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22205,7 +22208,7 @@ MonoBehaviour:
   Panel: {fileID: 1270687032}
   Galeria: {fileID: 1004792861}
   Panel3: {fileID: 1474856398}
-  name: Ceibo
+  specieName: Ceibo
 --- !u!114 &1900895456
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22376,7 +22379,7 @@ MonoBehaviour:
   Panel: {fileID: 1270687032}
   Galeria: {fileID: 1004792861}
   Panel3: {fileID: 1474856398}
-  name: 
+  specieName: 
 --- !u!65 &1903078084
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22618,7 +22621,7 @@ MonoBehaviour:
   Panel: {fileID: 1270687032}
   Galeria: {fileID: 1004792861}
   Panel3: {fileID: 1474856398}
-  name: Iguana
+  specieName: Iguana
 --- !u!4 &1945174811 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 476318, guid: b4806bcfd71324778b360c0299195b34,
@@ -22689,7 +22692,7 @@ MonoBehaviour:
   Panel: {fileID: 1270687032}
   Galeria: {fileID: 1004792861}
   Panel3: {fileID: 1474856398}
-  name: Ceibo
+  specieName: Ceibo
 --- !u!65 &1947808899
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23904,7 +23907,7 @@ MonoBehaviour:
   Panel: {fileID: 1270687032}
   Galeria: {fileID: 1004792861}
   Panel3: {fileID: 1474856398}
-  name: Guasmo
+  specieName: Guasmo
 --- !u!114 &2042574855
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24051,7 +24054,7 @@ MonoBehaviour:
   Panel: {fileID: 1270687032}
   Galeria: {fileID: 1004792861}
   Panel3: {fileID: 1474856398}
-  name: Ceibo
+  specieName: Ceibo
 --- !u!114 &2046840690
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24574,7 +24577,7 @@ MonoBehaviour:
   Panel: {fileID: 1270687032}
   Galeria: {fileID: 1004792861}
   Panel3: {fileID: 1474856398}
-  name: Ceibo
+  specieName: Ceibo
 --- !u!65 &2095049843
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25071,7 +25074,7 @@ MonoBehaviour:
   Panel: {fileID: 1270687032}
   Galeria: {fileID: 1004792861}
   Panel3: {fileID: 1474856398}
-  name: 
+  specieName: 
 --- !u!65 &2115642754
 BoxCollider:
   m_ObjectHideFlags: 0
