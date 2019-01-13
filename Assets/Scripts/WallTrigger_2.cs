@@ -9,7 +9,7 @@ public class WallTrigger_2 : MonoBehaviour
 {
 
     public Estacion station;
-    public GameObject stationScreen, panelPersonaje, panelEstrellas, canvasDialogo, canvasRespuestas, Panel;
+    public GameObject stationScreen, panelPersonaje, panelEstrellas, canvasDialogo, canvasRespuestas, Panel, mira;
     public CharacterQuestions personaje;
     public Text stationText, dialogoPersonaje, cantidadEstrellas, pregunta;
     private string texto;
@@ -19,6 +19,14 @@ public class WallTrigger_2 : MonoBehaviour
     private string feedback;
     public string WEB_URL = "";
     public string id;
+    public string[] ids_species;
+    private List<PreguntaObject> questions;
+    static List<string> usadas;
+
+    void Start()
+    {
+        usadas = new List<string>();
+    }
 
     void OnTriggerEnter(Collider obj)
     {
@@ -32,7 +40,9 @@ public class WallTrigger_2 : MonoBehaviour
     IEnumerator Preguntas()
     {
         GameObject.FindGameObjectWithTag("Player").GetComponent<FirstPersonController>().enabled = false;
+        GameObject.FindGameObjectWithTag("Mira").GetComponent<MouseController>().enabled = false;
         Panel.SetActive(false);
+        mira.SetActive(false);
         panelEstrellas.SetActive(true);
         panelPersonaje.SetActive(true);
         Cursor.lockState = CursorLockMode.None;
@@ -50,13 +60,6 @@ public class WallTrigger_2 : MonoBehaviour
         canvasRespuestas.SetActive(true);
     }
 
-    public void prueba()
-    {
-        Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
-        Debug.Log("prueba");
-    }
-
     public void Continuar()
     {
         Time.timeScale = 1f;
@@ -65,7 +68,9 @@ public class WallTrigger_2 : MonoBehaviour
         panelEstrellas.SetActive(false);
         canvasDialogo.SetActive(false);
         GameObject.FindGameObjectWithTag("Player").GetComponent<FirstPersonController>().enabled = true;
+        GameObject.FindGameObjectWithTag("Mira").GetComponent<MouseController>().enabled = true;
         Panel.SetActive(true);
+        mira.SetActive(true);
     }
 
     public void Wrapper(int i)
@@ -88,7 +93,7 @@ public class WallTrigger_2 : MonoBehaviour
         Debug.Log("triste");
         texto = "Oops!! Parece que no has prestado atención. No hay estrellas para ti por ahora.\n \n \n" + "Respuesta correcta: " + respuesta + "\n \n" + feedback;
         StartCoroutine(Dialogo(canvasDialogo, dialogoPersonaje, texto));
-        yield return new WaitForSeconds(10.0f);
+        yield return new WaitForSeconds(25.0f);
         Continuar();
     }
 
@@ -103,7 +108,7 @@ public class WallTrigger_2 : MonoBehaviour
         int.TryParse(cantidadEstrellas.text, out x);
         x += 5;
         cantidadEstrellas.text = x.ToString();
-        yield return new WaitForSeconds(10.0f);
+        yield return new WaitForSeconds(25.0f);
         Continuar();
     }
 
@@ -123,12 +128,22 @@ public class WallTrigger_2 : MonoBehaviour
 
     void GetPreguntaObjects(PreguntaObjectList objectList)
     {
+        questions = new List<PreguntaObject>();
         foreach (PreguntaObject root in objectList.preguntas)
         {
             //Debug.Log(id);
             //Debug.Log(root.QuestionId);
+            if (isInEstacion(root.QuestionId))
+            {
+                if (questions == null)
+                {
+                    Debug.Log("es null");
+                    questions.Add(root);
+                }
+                questions.Add(root);
+            }
 
-            if (id.Equals(root.QuestionId))
+            /*if (id.Equals(root.QuestionId))
             {
                 pregunta.text = root.Text;
                 m_opcionA.GetComponentInChildren<Text>().text = "A. " + root.Options[0];
@@ -161,9 +176,74 @@ public class WallTrigger_2 : MonoBehaviour
 
                 respuesta = root.Options[root.Answer];
                 feedback = root.Feedback;
-            }
+            }*/
 
         }
 
+        bool repeat = true;
+        while (repeat)
+        {
+            int rdn = Random.Range(0, questions.Count);
+            Debug.Log(rdn);
+            Debug.Log(questions.Count);
+            foreach (string t in usadas)
+            {
+                Debug.Log(t);
+            }
+            PreguntaObject q = questions[rdn];
+            if (!usadas.Contains(q.QuestionId))
+            {
+                usadas.Add(q.QuestionId);
+                pregunta.text = q.Text;
+                m_opcionA.GetComponentInChildren<Text>().text = "A. " + q.Options[0];
+                m_opcionB.GetComponentInChildren<Text>().text = "B. " + q.Options[1];
+                m_opcionC.GetComponentInChildren<Text>().text = "C. " + q.Options[2];
+                m_opcionD.GetComponentInChildren<Text>().text = "D. " + q.Options[3];
+                value_A = 0;
+                value_B = 0;
+                value_C = 0;
+                value_D = 0;
+                for (int i = 0; i < 4; i++)
+                {
+                    if (q.Answer == 0)
+                    {
+                        value_A = 1;
+                    }
+                    else if (q.Answer == 1)
+                    {
+                        value_B = 1;
+                    }
+                    else if (q.Answer == 2)
+                    {
+                        value_C = 1;
+                    }
+                    else
+                    {
+                        value_D = 1;
+                    }
+                }
+
+                respuesta = q.Options[q.Answer];
+                feedback = q.Feedback;
+                repeat = false;
+            }
+            else
+            {
+                repeat = true;
+            }
+        }
+
+    }
+
+    bool isInEstacion(string pregunta_id)
+    {
+        for (int i = 0; i < ids_species.Length; i++)
+        {
+            if (ids_species[i].Equals(pregunta_id))
+            {
+                return true;
+            }
+        }
+        return false;
     }
 }

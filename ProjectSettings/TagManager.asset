@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Spawn
   - Transition
+  - lb_groundTarget
+  - lb_perchTarget
+  - Mira
   layers:
   - Default
   - TransparentFX

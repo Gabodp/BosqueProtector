@@ -2136,7 +2136,7 @@ GameObject:
   - component: {fileID: 223417633}
   m_Layer: 0
   m_Name: MouseController
-  m_TagString: Untagged
+  m_TagString: Mira
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2615,6 +2615,7 @@ MonoBehaviour:
   canvasDialogo: {fileID: 2014518550}
   canvasRespuestas: {fileID: 935142761}
   Panel: {fileID: 1474856398}
+  mira: {fileID: 4436023}
   personaje: {fileID: 279092463}
   stationText: {fileID: 419226143}
   dialogoPersonaje: {fileID: 1895629047}
@@ -2626,6 +2627,8 @@ MonoBehaviour:
   m_opcionD: {fileID: 998623422}
   WEB_URL: http://200.126.14.250/api/bpv/question
   id: 5c13d3794745972d7d6dd899
+  ids_species:
+  - 5c32a2d43be4ee1117cd582a
 --- !u!65 &236006163
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3620,6 +3623,7 @@ MonoBehaviour:
   canvasDialogo: {fileID: 2014518550}
   canvasRespuestas: {fileID: 596062991}
   Panel: {fileID: 1474856398}
+  mira: {fileID: 4436023}
   personaje: {fileID: 279092463}
   stationText: {fileID: 419226143}
   dialogoPersonaje: {fileID: 1895629047}
@@ -3631,6 +3635,10 @@ MonoBehaviour:
   m_opcionD: {fileID: 772176564}
   WEB_URL: http://200.126.14.250/api/bpv/question
   id: 5c13d26d4745972d7d6dd80b
+  ids_species:
+  - 5c3a05bb924ecb7fe7f29e10
+  - 5c3a0606924ecb7fe7f29e11
+  - 5c32a1703be4ee1117cd5828
 --- !u!65 &306143556
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4527,6 +4535,7 @@ MonoBehaviour:
   canvasDialogo: {fileID: 2014518550}
   canvasRespuestas: {fileID: 253556217}
   Panel: {fileID: 1474856398}
+  mira: {fileID: 4436023}
   personaje: {fileID: 279092463}
   stationText: {fileID: 419226143}
   dialogoPersonaje: {fileID: 1895629047}
@@ -4538,6 +4547,11 @@ MonoBehaviour:
   m_opcionD: {fileID: 1379405582}
   WEB_URL: http://200.126.14.250/api/bpv/question
   id: 5c13d1d74745972d7d6dd7bc
+  ids_species:
+  - 5c32a1183be4ee1117cd5827
+  - 5c3a0534924ecb7fe7f29e0f
+  - 5c3a04e7924ecb7fe7f29e0e
+  - 5c32a1703be4ee1117cd5828
 --- !u!65 &341689739
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10020,6 +10034,7 @@ MonoBehaviour:
   canvasDialogo: {fileID: 2014518550}
   canvasRespuestas: {fileID: 294211757}
   Panel: {fileID: 1474856398}
+  mira: {fileID: 4436023}
   personaje: {fileID: 279092463}
   stationText: {fileID: 419226143}
   dialogoPersonaje: {fileID: 1895629047}
@@ -10031,6 +10046,10 @@ MonoBehaviour:
   m_opcionD: {fileID: 1667916473}
   WEB_URL: http://200.126.14.250/api/bpv/question
   id: 5c13d3f24745972d7d6dd8d1
+  ids_species:
+  - 5c3a069f924ecb7fe7f29e13
+  - 5c32a3293be4ee1117cd582b
+  - 5c32a1703be4ee1117cd5828
 --- !u!65 &952064699
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14044,6 +14063,7 @@ MonoBehaviour:
   canvasDialogo: {fileID: 2014518550}
   canvasRespuestas: {fileID: 1672622258}
   Panel: {fileID: 1474856398}
+  mira: {fileID: 4436023}
   personaje: {fileID: 279092463}
   stationText: {fileID: 419226143}
   dialogoPersonaje: {fileID: 1895629047}
@@ -14055,6 +14075,9 @@ MonoBehaviour:
   m_opcionD: {fileID: 2027466070}
   WEB_URL: http://200.126.14.250/api/bpv/question
   id: 5c13d3014745972d7d6dd856
+  ids_species:
+  - 5c3a065f924ecb7fe7f29e12
+  - 5c32a2793be4ee1117cd5829
 --- !u!65 &1287707584
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24669,6 +24692,7 @@ MonoBehaviour:
   canvasDialogo: {fileID: 2014518550}
   canvasRespuestas: {fileID: 60867646}
   Panel: {fileID: 1474856398}
+  mira: {fileID: 4436023}
   personaje: {fileID: 279092463}
   stationText: {fileID: 419226143}
   dialogoPersonaje: {fileID: 1895629047}
@@ -24680,6 +24704,10 @@ MonoBehaviour:
   m_opcionD: {fileID: 653238284}
   WEB_URL: http://200.126.14.250/api/bpv/question
   id: 5c13d4884745972d7d6dd90a
+  ids_species:
+  - 5c3a065f924ecb7fe7f29e12
+  - 5c32a37b3be4ee1117cd582c
+  - 5c3a069f924ecb7fe7f29e13
 --- !u!65 &2098440842
 BoxCollider:
   m_ObjectHideFlags: 0

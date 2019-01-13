@@ -26,6 +26,7 @@ public class Final : MonoBehaviour {
     IEnumerator Preguntas()
     {
         GameObject.FindGameObjectWithTag("Player").GetComponent<FirstPersonController>().enabled = false;
+        GameObject.FindGameObjectWithTag("Mira").GetComponent<MouseController>().enabled = false;
         Panel.SetActive(false);
         //panelEstrellas.SetActive(true);
         panelPersonaje.SetActive(true);
@@ -59,6 +60,7 @@ public class Final : MonoBehaviour {
         //panelEstrellas.SetActive(false);
         canvasDialogo.SetActive(false);
         GameObject.FindGameObjectWithTag("Player").GetComponent<FirstPersonController>().enabled = true;
+        GameObject.FindGameObjectWithTag("Mira").GetComponent<MouseController>().enabled = true;
         Panel.SetActive(true);
     }
 
