@@ -28,7 +28,7 @@ public class MenuPausa : MonoBehaviour {
 		IsPaused = false;
 		GameObject.FindGameObjectWithTag("Player").GetComponent<FirstPersonController>().enabled = true;
 		MenuPausaUI.SetActive(false);
-		panelEstrellas.SetActive(false);
+		//panelEstrellas.SetActive(false);
 		Panel.SetActive(true);
 	}
 
@@ -36,7 +36,7 @@ public class MenuPausa : MonoBehaviour {
 		GameObject.FindGameObjectWithTag("Player").GetComponent<FirstPersonController>().enabled = false;
 		Cursor.lockState = CursorLockMode.None;
 		Cursor.visible = true;
-		panelEstrellas.SetActive(true);
+		//panelEstrellas.SetActive(true);
 		MenuPausaUI.SetActive(true);
 		Panel.SetActive(false);
 		Time.timeScale = 0f;
