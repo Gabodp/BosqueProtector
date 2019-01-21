@@ -22,12 +22,38 @@ public class WallTrigger_2 : MonoBehaviour
     public string[] ids_species;
     private List<PreguntaObject> questions;
     static List<string> usadas;
+    private bool begin;
 
     void Start()
     {
         usadas = new List<string>();
+        begin = false;
     }
 
+    void Update()
+    {
+        if(MenuPausa.IsPaused)
+        {
+            begin = true;
+            
+
+        }
+        else
+        {
+            if(!MenuPausa.IsPaused && begin)
+            {
+                /*Panel.SetActive(true);
+                panelPersonaje.SetActive(true);
+                panelEstrellas.SetActive(true);
+                canvasDialogo.SetActive(true);
+                StartCoroutine(Preguntas());*/
+                GameObject.FindGameObjectWithTag("Player").GetComponent<FirstPersonController>().enabled = false;
+
+            }
+            begin = false;
+
+        }
+    }
     void OnTriggerEnter(Collider obj)
     {
         if (obj.gameObject.tag == "Player")
@@ -43,7 +69,7 @@ public class WallTrigger_2 : MonoBehaviour
         GameObject.FindGameObjectWithTag("Mira").GetComponent<MouseController>().enabled = false;
         Panel.SetActive(false);
         mira.SetActive(false);
-        panelEstrellas.SetActive(true);
+        //panelEstrellas.SetActive(true);
         panelPersonaje.SetActive(true);
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
@@ -53,7 +79,7 @@ public class WallTrigger_2 : MonoBehaviour
         m_opcionB.onClick.AddListener(delegate { Wrapper(value_B); });
         m_opcionC.onClick.AddListener(delegate { Wrapper(value_C); });
         m_opcionD.onClick.AddListener(delegate { Wrapper(value_D); });
-        texto = "It's question time!! Ahora comprobaremos lo que has aprendido. Aquí va la pregunta..";
+        texto = "Es tiempo de pregunta!! Ahora comprobaremos lo que has aprendido. Aquí va la pregunta..";
         StartCoroutine(Dialogo(canvasDialogo, dialogoPersonaje, texto));
         yield return new WaitForSeconds(10.0f);
         canvasDialogo.SetActive(false);
@@ -62,6 +88,7 @@ public class WallTrigger_2 : MonoBehaviour
 
     public void Continuar()
     {
+        begin = false;
         Time.timeScale = 1f;
         personaje.PersonajeRestart();
         panelPersonaje.SetActive(false);
@@ -88,6 +115,7 @@ public class WallTrigger_2 : MonoBehaviour
     IEnumerator RespuestaIncorrecta()
     {
         canvasRespuestas.SetActive(false);
+        panelEstrellas.SetActive(true);
         canvasDialogo.SetActive(true);
         personaje.PersonajeTriste();
         Debug.Log("triste");
@@ -100,6 +128,7 @@ public class WallTrigger_2 : MonoBehaviour
     IEnumerator RespuestaCorrecta()
     {
         canvasRespuestas.SetActive(false);
+        panelEstrellas.SetActive(true);
         canvasDialogo.SetActive(true);
         personaje.PersonajeFeliz();
         texto = "Felicidades!! Has acertado con tu respuesta. Te has ganado 5 estrellas. Ahora continúa aprendiendo\n \n \n" + "Respuesta correcta: " + respuesta + "\n \n" + feedback;
