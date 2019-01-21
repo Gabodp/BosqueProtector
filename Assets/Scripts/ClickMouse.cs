@@ -22,8 +22,10 @@ public class ClickMouse : MonoBehaviour {
 		GaleryScript = Galeria.GetComponent<Galery>();	
 	}
 
-    void OnMouseDown () {
+    public void ShowGallery () {
     	if (MenuPausa.IsPaused == false) {
+			Cursor.lockState = CursorLockMode.None;
+			Cursor.visible = true;
 	        Panel.SetActive(true);
 	        Galeria.SetActive(true);
 	        Panel3.SetActive(false);
@@ -64,10 +66,6 @@ public class ClickMouse : MonoBehaviour {
 		Galeria.SetActive(false);
 		IsGalery = false;
 		GameManager.instance.paused = false;
-	}
-
-	public bool GetIsGalery() {
-		return IsGalery;
 	}
     
 }

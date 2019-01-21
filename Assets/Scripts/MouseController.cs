@@ -7,6 +7,12 @@ public class MouseController : MonoBehaviour {
 
 	private Rect screenRect;
 
+	public FirstPersonController fpsController;
+	public float range = 100f;
+	public Camera fpsCamera;
+
+	private ClickMouse click;
+
 	void Start () {
 		Cursor.lockState = CursorLockMode.Locked;
 		Cursor.visible = false;
@@ -16,10 +22,14 @@ public class MouseController : MonoBehaviour {
 	void Update(){
 		if (!GameManager.instance.paused){
 			if (screenRect.Contains(Input.mousePosition)) {
-				GameObject.FindGameObjectWithTag("Player").GetComponent<FirstPersonController>().enabled = true;
+				fpsController.enabled = true;
 			} else {
-				GameObject.FindGameObjectWithTag("Player").GetComponent<FirstPersonController>().enabled = false;
+				fpsController.enabled = false;
 			}
+		}
+
+		if (Input.GetButtonDown("Fire1")) {
+			ClickObject();
 		}
 	}
 	
@@ -28,5 +38,15 @@ public class MouseController : MonoBehaviour {
 			Cursor.lockState = CursorLockMode.Locked;
 			Cursor.visible = false;
 		}
+	}
+
+	void ClickObject() {
+		RaycastHit hit;
+		if (Physics.Raycast(fpsCamera.transform.position, fpsCamera.transform.forward, out hit, range)) {
+			click = hit.collider.gameObject.GetComponent<ClickMouse>();
+			if (click != null) {
+				click.ShowGallery();
+			}
+		};
 	}
 }
