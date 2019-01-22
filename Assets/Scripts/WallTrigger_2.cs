@@ -35,25 +35,24 @@ public class WallTrigger_2 : MonoBehaviour
         if(MenuPausa.IsPaused)
         {
             begin = true;
-            
-
         }
         else
         {
             if(!MenuPausa.IsPaused && begin)
             {
-                /*Panel.SetActive(true);
-                panelPersonaje.SetActive(true);
-                panelEstrellas.SetActive(true);
-                canvasDialogo.SetActive(true);
-                StartCoroutine(Preguntas());*/
                 GameObject.FindGameObjectWithTag("Player").GetComponent<FirstPersonController>().enabled = false;
-
             }
             begin = false;
 
         }
     }
+
+    void DestroyScriptInstance()
+    {
+        // Removes this script instance from the game object
+        Destroy(this);
+    }
+
     void OnTriggerEnter(Collider obj)
     {
         if (obj.gameObject.tag == "Player")
@@ -66,10 +65,9 @@ public class WallTrigger_2 : MonoBehaviour
     IEnumerator Preguntas()
     {
         GameObject.FindGameObjectWithTag("Player").GetComponent<FirstPersonController>().enabled = false;
-        GameObject.FindGameObjectWithTag("Mira").GetComponent<MouseController>().enabled = false;
+        GameObject.FindGameObjectWithTag("Player").GetComponent<MouseController>().enabled = false;
         Panel.SetActive(false);
         mira.SetActive(false);
-        //panelEstrellas.SetActive(true);
         panelPersonaje.SetActive(true);
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
@@ -95,9 +93,10 @@ public class WallTrigger_2 : MonoBehaviour
         panelEstrellas.SetActive(false);
         canvasDialogo.SetActive(false);
         GameObject.FindGameObjectWithTag("Player").GetComponent<FirstPersonController>().enabled = true;
-        GameObject.FindGameObjectWithTag("Mira").GetComponent<MouseController>().enabled = true;
+        GameObject.FindGameObjectWithTag("Player").GetComponent<MouseController>().enabled = true;
         Panel.SetActive(true);
         mira.SetActive(true);
+        DestroyScriptInstance();
     }
 
     public void Wrapper(int i)
@@ -146,7 +145,7 @@ public class WallTrigger_2 : MonoBehaviour
         int longitud = texto.Length;
         int contador = 0;
         canvasDialogo.SetActive(true);
-        dialogoPersonaje.text = "";
+        dialogoPersonaje.text = string.Empty;
         while (contador < longitud)
         {
             dialogoPersonaje.text = dialogoPersonaje.text + texto[contador];
@@ -160,8 +159,6 @@ public class WallTrigger_2 : MonoBehaviour
         questions = new List<PreguntaObject>();
         foreach (PreguntaObject root in objectList.preguntas)
         {
-            //Debug.Log(id);
-            //Debug.Log(root.QuestionId);
             if (isInEstacion(root.QuestionId))
             {
                 if (questions == null)
@@ -171,41 +168,6 @@ public class WallTrigger_2 : MonoBehaviour
                 }
                 questions.Add(root);
             }
-
-            /*if (id.Equals(root.QuestionId))
-            {
-                pregunta.text = root.Text;
-                m_opcionA.GetComponentInChildren<Text>().text = "A. " + root.Options[0];
-                m_opcionB.GetComponentInChildren<Text>().text = "B. " + root.Options[1];
-                m_opcionC.GetComponentInChildren<Text>().text = "C. " + root.Options[2];
-                m_opcionD.GetComponentInChildren<Text>().text = "D. " + root.Options[3];
-                value_A = 0;
-                value_B = 0;
-                value_C = 0;
-                value_D = 0;
-                for (int i = 0; i < 4; i++)
-                {
-                    if (root.Answer == 0)
-                    {
-                        value_A = 1;
-                    }
-                    else if (root.Answer == 1)
-                    {
-                        value_B = 1;
-                    }
-                    else if (root.Answer == 2)
-                    {
-                        value_C = 1;
-                    }
-                    else
-                    {
-                        value_D = 1;
-                    }
-                }
-
-                respuesta = root.Options[root.Answer];
-                feedback = root.Feedback;
-            }*/
 
         }
 
