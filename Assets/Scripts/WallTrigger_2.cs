@@ -4,25 +4,30 @@ using UnityEngine.UI;
 using UnityStandardAssets.Characters.FirstPerson;
 using UnityEngine.SceneManagement;
 using System.Collections.Generic;
+using UnityEngine.Networking;
+using System.IO;
 
 public class WallTrigger_2 : MonoBehaviour
 {
 
     public Estacion station;
-    public GameObject stationScreen, panelPersonaje, panelEstrellas, canvasDialogo, canvasRespuestas, Panel, mira;
+    public GameObject stationScreen, panelPersonaje, panelEstrellas, canvasDialogo, canvasRespuestas, Panel, mira, estrellas;
     public CharacterQuestions personaje;
-    public Text stationText, dialogoPersonaje, cantidadEstrellas, pregunta;
+    public Text stationText, dialogoPersonaje, cantidadEstrellas, pregunta, desafio;
     private string texto;
     public Button m_opcionA, m_opcionB, m_opcionC, m_opcionD;
     private int value_A, value_B, value_C, value_D;
     private string respuesta;
     private string feedback;
     public string WEB_URL = "";
-    public string id;
-    public string[] ids_species;
+    private string[] ids_preguntas;
     private List<PreguntaObject> questions;
     static List<string> usadas;
     private bool begin;
+    private PreguntaObject q;
+    public RawImage imagen;
+    private SpecieObject tmp = null;
+    public int n_estacion;
 
     void Start()
     {
@@ -32,13 +37,13 @@ public class WallTrigger_2 : MonoBehaviour
 
     void Update()
     {
-        if(MenuPausa.IsPaused)
+        if (MenuPausa.IsPaused)
         {
             begin = true;
         }
         else
         {
-            if(!MenuPausa.IsPaused && begin)
+            if (!MenuPausa.IsPaused && begin)
             {
                 GameObject.FindGameObjectWithTag("Player").GetComponent<FirstPersonController>().enabled = false;
             }
@@ -57,8 +62,11 @@ public class WallTrigger_2 : MonoBehaviour
     {
         if (obj.gameObject.tag == "Player")
         {
+
+            leerInfoPreguntas();
             StartCoroutine(RestClient.Instance.Get(WEB_URL, GetPreguntaObjects));
             StartCoroutine(Preguntas());
+            
         }
     }
 
@@ -68,6 +76,8 @@ public class WallTrigger_2 : MonoBehaviour
         GameObject.FindGameObjectWithTag("Player").GetComponent<MouseController>().enabled = false;
         Panel.SetActive(false);
         mira.SetActive(false);
+        estrellas.SetActive(false);
+        imagen.enabled = false;
         panelPersonaje.SetActive(true);
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
@@ -77,7 +87,7 @@ public class WallTrigger_2 : MonoBehaviour
         m_opcionB.onClick.AddListener(delegate { Wrapper(value_B); });
         m_opcionC.onClick.AddListener(delegate { Wrapper(value_C); });
         m_opcionD.onClick.AddListener(delegate { Wrapper(value_D); });
-        texto = "Es tiempo de pregunta!! Ahora comprobaremos lo que has aprendido. Aquí va la pregunta..";
+        texto = "Hola, veamos si has prestado atencion, a ver si puedes con el siguiente desafio";
         StartCoroutine(Dialogo(canvasDialogo, dialogoPersonaje, texto));
         yield return new WaitForSeconds(10.0f);
         canvasDialogo.SetActive(false);
@@ -90,7 +100,8 @@ public class WallTrigger_2 : MonoBehaviour
         Time.timeScale = 1f;
         personaje.PersonajeRestart();
         panelPersonaje.SetActive(false);
-        panelEstrellas.SetActive(false);
+        //panelEstrellas.SetActive(false);
+        estrellas.SetActive(false);
         canvasDialogo.SetActive(false);
         GameObject.FindGameObjectWithTag("Player").GetComponent<FirstPersonController>().enabled = true;
         GameObject.FindGameObjectWithTag("Player").GetComponent<MouseController>().enabled = true;
@@ -118,7 +129,7 @@ public class WallTrigger_2 : MonoBehaviour
         canvasDialogo.SetActive(true);
         personaje.PersonajeTriste();
         Debug.Log("triste");
-        texto = "Oops!! Parece que no has prestado atención. No hay estrellas para ti por ahora.\n \n \n" + "Respuesta correcta: " + respuesta + "\n \n" + feedback;
+        texto = "\n \n \n \n" + "Respuesta correcta: " + respuesta + "\n \n" + feedback;
         StartCoroutine(Dialogo(canvasDialogo, dialogoPersonaje, texto));
         yield return new WaitForSeconds(25.0f);
         Continuar();
@@ -128,14 +139,20 @@ public class WallTrigger_2 : MonoBehaviour
     {
         canvasRespuestas.SetActive(false);
         panelEstrellas.SetActive(true);
+        estrellas.SetActive(true);
+        imagen.enabled = true;
         canvasDialogo.SetActive(true);
         personaje.PersonajeFeliz();
-        texto = "Felicidades!! Has acertado con tu respuesta. Te has ganado 5 estrellas. Ahora continúa aprendiendo\n \n \n" + "Respuesta correcta: " + respuesta + "\n \n" + feedback;
+        texto = "\n \n \n \n" + "Respuesta correcta: " + respuesta + "\n \n" + feedback;
         StartCoroutine(Dialogo(canvasDialogo, dialogoPersonaje, texto));
         int x = 0;
+        int y = 0;
         int.TryParse(cantidadEstrellas.text, out x);
+        int.TryParse(desafio.text, out y);
         x += 5;
+        y += 1;
         cantidadEstrellas.text = x.ToString();
+        desafio.text = y.ToString();
         yield return new WaitForSeconds(25.0f);
         Continuar();
     }
@@ -159,7 +176,7 @@ public class WallTrigger_2 : MonoBehaviour
         questions = new List<PreguntaObject>();
         foreach (PreguntaObject root in objectList.preguntas)
         {
-            if (isInEstacion(root.QuestionId))
+            if (isInEstacion(root.Id))
             {
                 if (questions == null)
                 {
@@ -174,6 +191,7 @@ public class WallTrigger_2 : MonoBehaviour
         bool repeat = true;
         while (repeat)
         {
+            Debug.Log("COUNT:" + questions.Count);
             int rdn = Random.Range(0, questions.Count);
             Debug.Log(rdn);
             Debug.Log(questions.Count);
@@ -181,10 +199,21 @@ public class WallTrigger_2 : MonoBehaviour
             {
                 Debug.Log(t);
             }
-            PreguntaObject q = questions[rdn];
+
+            q = questions[rdn];
             if (!usadas.Contains(q.QuestionId))
             {
                 usadas.Add(q.QuestionId);
+                /*foreach(SpecieObject specie in especies)
+                {
+                    if (q.SpecieId == specie.Id)
+                    {
+                        StartCoroutine(LoadImage(specie.Gallery[0].Id, specie.Id));
+                    }
+                    
+                }*/
+                int sid = leerInfoSpecie(q.Id);
+                StartCoroutine(CargarInfo(sid));
                 pregunta.text = q.Text;
                 m_opcionA.GetComponentInChildren<Text>().text = "A. " + q.Options[0];
                 m_opcionB.GetComponentInChildren<Text>().text = "B. " + q.Options[1];
@@ -226,15 +255,105 @@ public class WallTrigger_2 : MonoBehaviour
 
     }
 
-    bool isInEstacion(string pregunta_id)
+    bool isInEstacion(int pregunta_id)
     {
-        for (int i = 0; i < ids_species.Length; i++)
+        for (int i = 0; i < ids_preguntas.Length; i++)
         {
-            if (ids_species[i].Equals(pregunta_id))
+            if (System.Convert.ToInt32(ids_preguntas[i]) == pregunta_id)
             {
                 return true;
             }
         }
         return false;
+    }
+
+
+    public IEnumerator CargarInfo(int sid)
+    {
+
+        //UnityWebRequest www = UnityWebRequest.Get("200.126.14.250/api/bpv/specie?name=" + "Iguana");
+        UnityWebRequest www = UnityWebRequest.Get("200.126.14.250/api/bpv/specie/" + sid);
+        //Debug.Log("URL de la info:" + "200.126.14.250/api/bpv/specie?name=" + "Ardilla");
+        yield return www.SendWebRequest();
+
+        if (www.isNetworkError || www.isHttpError)
+        {
+            Debug.Log(www.error);
+        }
+        else
+        {
+            string data = www.downloadHandler.text;
+            try
+            {
+                tmp  = JsonUtility.FromJson<SpecieObject>(data);
+                Debug.Log(tmp.Name);
+            }
+            catch (System.Exception)
+            {
+                Debug.Log("No hay datos de este árbol");
+            }
+        }
+
+        StartCoroutine(LoadImage(tmp.Gallery[0].Id, tmp.Id));
+        
+    }
+
+    public IEnumerator LoadImage(int id, int idSpecie)
+    {
+        WWW wwwLoader = new WWW("200.126.14.250/api/bpv/specie/" + idSpecie + "/gallery/" + id + "/");
+        Debug.Log("URL de la imagen: " + "200.126.14.250/api/bpv/specie/" + idSpecie + "/gallery/" + id + "/");
+        yield return wwwLoader;
+
+        imagen.texture = wwwLoader.texture;
+    }
+
+    void leerInfoPreguntas()
+    {
+        string path = "Assets/Resources/infoPreguntas.txt";
+
+        //Read the text from directly from the test.txt file
+        StreamReader reader = new StreamReader(path);
+        string linea = reader.ReadLine();
+        while(linea != null)
+        {
+            Debug.Log("while");
+            string[] var = linea.Split('|');
+            int z = 0;
+            int.TryParse(var[0], out z);
+            Debug.Log("var z:" + z);
+            if (n_estacion == z)
+            {
+                ids_preguntas = var[1].Split(',');
+            }
+            linea = reader.ReadLine();
+        }
+        reader.Close();
+    }
+
+    int leerInfoSpecie(int ssid)
+    {
+        int num = 0;
+        string path = "Assets/Resources/infoSpecie.txt";
+
+        //Read the text from directly from the test.txt file
+        StreamReader reader = new StreamReader(path);
+        string linea = reader.ReadLine();
+        while (linea != null)
+        {
+            Debug.Log("while");
+            string[] var = linea.Split('|');
+            int w = 0;
+            int.TryParse(var[0], out w);
+            Debug.Log("var z:" + w);
+            if (ssid == w)
+            {
+                //ids_preguntas = var[1].Split(',');
+                num = System.Convert.ToInt32(var[1]);
+                return num;
+            }
+            linea = reader.ReadLine();
+        }
+        reader.Close();
+        return num;
     }
 }

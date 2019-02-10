@@ -87,9 +87,9 @@ public class Arbol {
 	public Gallery[] Gallery;
 }
 
-[Serializable]
+/*[Serializable]
 public class Gallery {
 	public string PhotoId;
 	public int Id;
 	public string Description;
-}
+}*/

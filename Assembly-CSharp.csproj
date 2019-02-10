@@ -130,6 +130,8 @@
     <Compile Include="Assets\Scripts\RestClient.cs" />
     <Compile Include="Assets\Scripts\SceneChanger.cs" />
     <Compile Include="Assets\Scripts\SoundManager.cs" />
+    <Compile Include="Assets\Scripts\SpecieObject.cs" />
+    <Compile Include="Assets\Scripts\SpecieObjectList.cs" />
     <Compile Include="Assets\Scripts\WallTrigger.cs" />
     <Compile Include="Assets\Scripts\WallTrigger_2.cs" />
     <None Include="Assets\GreenForest\PostProcessing\Resources\Shaders\DepthOfField.shader" />
@@ -139,6 +141,7 @@
     <None Include="Assets\GreenForest\PostProcessing\Resources\Shaders\LutGen.shader" />
     <None Include="Assets\GreenForest\PostProcessing\Editor Resources\Monitors\HistogramRender.shader" />
     <None Include="Assets\GreenForest\PostProcessing\Editor Resources\UI\CurveBackground.shader" />
+    <None Include="Assets\Resources\infoPreguntas.txt" />
     <None Include="Assets\GreenForest\PostProcessing\Resources\Shaders\ScreenSpaceReflection.shader" />
     <None Include="Assets\GreenForest\PostProcessing\Utilities\CustomMotionTexture\Shaders\CustomMotionVectorTexture.shader" />
     <None Include="Assets\GreenForest\PostProcessing\Resources\Shaders\ACES.cginc" />
@@ -154,6 +157,7 @@
     <None Include="Assets\GreenForest\PostProcessing\Resources\Shaders\AmbientOcclusion.shader" />
     <None Include="Assets\GreenForest\PostProcessing\Resources\Bluenoise64\LICENSE.txt" />
     <None Include="Assets\GreenForest\PostProcessing\Resources\Shaders\BuiltinDebugViews.shader" />
+    <None Include="Assets\Resources\infoSpecie.txt" />
     <None Include="Assets\3D text\3dText.shader" />
     <None Include="Assets\GreenForest\PostProcessing\Resources\Shaders\Common.cginc" />
     <None Include="Assets\GreenForest\PostProcessing\Resources\Bluenoise64\COPYING.txt" />
