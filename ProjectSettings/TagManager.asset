@@ -9,6 +9,7 @@ TagManager:
   - lb_groundTarget
   - lb_perchTarget
   - Mira
+  - Especies
   layers:
   - Default
   - TransparentFX

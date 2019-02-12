@@ -9,7 +9,7 @@ public class WallTrigger : MonoBehaviour
     public GameObject stationScreen;
     public Text stationText;
     public Text nameStation;
-
+    
     void OnTriggerEnter(Collider obj)
     {
         if (obj.gameObject.tag == "Player")

@@ -62,7 +62,7 @@ public class WallTrigger_2 : MonoBehaviour
     {
         if (obj.gameObject.tag == "Player")
         {
-
+            GetSpecies();
             leerInfoPreguntas();
             StartCoroutine(RestClient.Instance.Get(WEB_URL, GetPreguntaObjects));
             StartCoroutine(Preguntas());
@@ -316,11 +316,11 @@ public class WallTrigger_2 : MonoBehaviour
         string linea = reader.ReadLine();
         while(linea != null)
         {
-            Debug.Log("while");
+            //Debug.Log("while");
             string[] var = linea.Split('|');
             int z = 0;
             int.TryParse(var[0], out z);
-            Debug.Log("var z:" + z);
+            //Debug.Log("var z:" + z);
             if (n_estacion == z)
             {
                 ids_preguntas = var[1].Split(',');
@@ -340,11 +340,11 @@ public class WallTrigger_2 : MonoBehaviour
         string linea = reader.ReadLine();
         while (linea != null)
         {
-            Debug.Log("while");
+            //Debug.Log("while");
             string[] var = linea.Split('|');
             int w = 0;
             int.TryParse(var[0], out w);
-            Debug.Log("var z:" + w);
+            //Debug.Log("var z:" + w);
             if (ssid == w)
             {
                 //ids_preguntas = var[1].Split(',');
@@ -355,5 +355,16 @@ public class WallTrigger_2 : MonoBehaviour
         }
         reader.Close();
         return num;
+    }
+
+    public void GetSpecies() {
+        foreach(Transform child in station.transform) {
+            if (child.tag == "Especies") {
+                GameObject especies = child.gameObject;
+                foreach (Transform specie in especies.transform) {
+                    Debug.Log(specie);
+                }
+            }
+        }
     }
 }
