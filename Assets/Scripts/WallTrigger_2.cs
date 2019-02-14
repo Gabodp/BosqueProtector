@@ -361,8 +361,17 @@ public class WallTrigger_2 : MonoBehaviour
         foreach(Transform child in station.transform) {
             if (child.tag == "Especies") {
                 GameObject especies = child.gameObject;
+                int size = especies.transform.childCount;
+                string[] names = new string[size];
+                int i = 0;
                 foreach (Transform specie in especies.transform) {
-                    Debug.Log(specie);
+                    names[i] = specie.GetComponent<ClickMouse>().specieName;
+                    i++;
+                }
+                
+                for (int j = 0; j < names.Length; j++)
+                {
+                    Debug.Log("names[" + j + "] = " + names[j]);
                 }
             }
         }
