@@ -14817,7 +14817,7 @@ MonoBehaviour:
   dialogoPersonaje: {fileID: 1895629047}
   cantidadEstrellas: {fileID: 2050545056}
   pregunta: {fileID: 271707027}
-  desafio: {fileID: 0}
+  desafio: {fileID: 1177076736}
   m_opcionA: {fileID: 597807849}
   m_opcionB: {fileID: 1527840803}
   m_opcionC: {fileID: 945178544}

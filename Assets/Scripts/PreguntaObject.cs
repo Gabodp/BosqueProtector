@@ -18,6 +18,19 @@ public class JsonHelper
     }
     
 }
+[System.Serializable]
+public class StationP
+{
+    public string StationId;
+    public int Id;
+    public string APIKey;
+    public string Name;
+    public int GameStation;
+    public string Latitude;
+    public string Longitude;
+    public string AndroidVersion;
+    public string ServicesVersion;
+}
 
 [System.Serializable]
 public class PreguntaObject {
@@ -28,4 +41,6 @@ public class PreguntaObject {
     public List<string> Options;
     public int Answer;
     public string Feedback;
+    public List<StationP> Stations;
+    public string Category;
 }

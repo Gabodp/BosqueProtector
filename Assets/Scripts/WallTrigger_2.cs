@@ -62,8 +62,8 @@ public class WallTrigger_2 : MonoBehaviour
     {
         if (obj.gameObject.tag == "Player")
         {
-            GetSpecies();
-            leerInfoPreguntas();
+            //GetSpecies();
+            //leerInfoPreguntas();
             StartCoroutine(RestClient.Instance.Get(WEB_URL, GetPreguntaObjects));
             StartCoroutine(Preguntas());
             
@@ -126,6 +126,7 @@ public class WallTrigger_2 : MonoBehaviour
     {
         canvasRespuestas.SetActive(false);
         panelEstrellas.SetActive(true);
+        imagen.enabled = true;
         canvasDialogo.SetActive(true);
         personaje.PersonajeTriste();
         Debug.Log("triste");
@@ -176,7 +177,7 @@ public class WallTrigger_2 : MonoBehaviour
         questions = new List<PreguntaObject>();
         foreach (PreguntaObject root in objectList.preguntas)
         {
-            if (isInEstacion(root.Id))
+            if (isInEstacion(root.Stations))
             {
                 if (questions == null)
                 {
@@ -204,16 +205,7 @@ public class WallTrigger_2 : MonoBehaviour
             if (!usadas.Contains(q.QuestionId))
             {
                 usadas.Add(q.QuestionId);
-                /*foreach(SpecieObject specie in especies)
-                {
-                    if (q.SpecieId == specie.Id)
-                    {
-                        StartCoroutine(LoadImage(specie.Gallery[0].Id, specie.Id));
-                    }
-                    
-                }*/
-                int sid = leerInfoSpecie(q.Id);
-                StartCoroutine(CargarInfo(sid));
+                StartCoroutine(CargarInfo(q.SpecieId));
                 pregunta.text = q.Text;
                 m_opcionA.GetComponentInChildren<Text>().text = "A. " + q.Options[0];
                 m_opcionB.GetComponentInChildren<Text>().text = "B. " + q.Options[1];
@@ -255,11 +247,11 @@ public class WallTrigger_2 : MonoBehaviour
 
     }
 
-    bool isInEstacion(int pregunta_id)
+    bool isInEstacion(List<StationP> estaciones)
     {
-        for (int i = 0; i < ids_preguntas.Length; i++)
+        foreach(StationP sp in estaciones)
         {
-            if (System.Convert.ToInt32(ids_preguntas[i]) == pregunta_id)
+            if(sp.GameStation == n_estacion)
             {
                 return true;
             }
@@ -272,7 +264,7 @@ public class WallTrigger_2 : MonoBehaviour
     {
 
         //UnityWebRequest www = UnityWebRequest.Get("200.126.14.250/api/bpv/specie?name=" + "Iguana");
-        UnityWebRequest www = UnityWebRequest.Get("200.126.14.250/api/bpv/specie/" + sid);
+        UnityWebRequest www = UnityWebRequest.Get("http://200.126.14.250/api/bpv/specie/" + sid + "/");
         //Debug.Log("URL de la info:" + "200.126.14.250/api/bpv/specie?name=" + "Ardilla");
         yield return www.SendWebRequest();
 
@@ -300,61 +292,11 @@ public class WallTrigger_2 : MonoBehaviour
 
     public IEnumerator LoadImage(int id, int idSpecie)
     {
-        WWW wwwLoader = new WWW("200.126.14.250/api/bpv/specie/" + idSpecie + "/gallery/" + id + "/");
-        Debug.Log("URL de la imagen: " + "200.126.14.250/api/bpv/specie/" + idSpecie + "/gallery/" + id + "/");
+        WWW wwwLoader = new WWW("http://200.126.14.250/api/bpv/specie/" + idSpecie + "/gallery/" + id + "/");
+        //Debug.Log("URL de la imagen: " + "200.126.14.250/api/bpv/specie/" + idSpecie + "/gallery/" + id + "/");
         yield return wwwLoader;
 
         imagen.texture = wwwLoader.texture;
-    }
-
-    void leerInfoPreguntas()
-    {
-        string path = "Assets/Resources/infoPreguntas.txt";
-
-        //Read the text from directly from the test.txt file
-        StreamReader reader = new StreamReader(path);
-        string linea = reader.ReadLine();
-        while(linea != null)
-        {
-            //Debug.Log("while");
-            string[] var = linea.Split('|');
-            int z = 0;
-            int.TryParse(var[0], out z);
-            //Debug.Log("var z:" + z);
-            if (n_estacion == z)
-            {
-                ids_preguntas = var[1].Split(',');
-            }
-            linea = reader.ReadLine();
-        }
-        reader.Close();
-    }
-
-    int leerInfoSpecie(int ssid)
-    {
-        int num = 0;
-        string path = "Assets/Resources/infoSpecie.txt";
-
-        //Read the text from directly from the test.txt file
-        StreamReader reader = new StreamReader(path);
-        string linea = reader.ReadLine();
-        while (linea != null)
-        {
-            //Debug.Log("while");
-            string[] var = linea.Split('|');
-            int w = 0;
-            int.TryParse(var[0], out w);
-            //Debug.Log("var z:" + w);
-            if (ssid == w)
-            {
-                //ids_preguntas = var[1].Split(',');
-                num = System.Convert.ToInt32(var[1]);
-                return num;
-            }
-            linea = reader.ReadLine();
-        }
-        reader.Close();
-        return num;
     }
 
     public void GetSpecies() {
