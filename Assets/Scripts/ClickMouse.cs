@@ -42,7 +42,7 @@ public class ClickMouse : MonoBehaviour {
     {
 		if (Input.GetKeyUp(KeyCode.Q))
         {
-			Continuar();
+            Continuar();
         }
         
     }

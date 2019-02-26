@@ -20,7 +20,7 @@ public class WallTrigger_2 : MonoBehaviour
     private string respuesta;
     private string feedback;
     public string WEB_URL = "";
-    private string[] ids_preguntas;
+    private string API = "http://200.126.14.250/api/bpv/specie/";
     private List<PreguntaObject> questions;
     static List<string> usadas;
     private bool begin;
@@ -62,16 +62,17 @@ public class WallTrigger_2 : MonoBehaviour
     {
         if (obj.gameObject.tag == "Player")
         {
-            //GetSpecies();
-            //leerInfoPreguntas();
             StartCoroutine(RestClient.Instance.Get(WEB_URL, GetPreguntaObjects));
-            StartCoroutine(Preguntas());
-            
+            StartCoroutine(Preguntas());   
         }
     }
 
     IEnumerator Preguntas()
     {
+        int xx = 0;
+        int.TryParse(stationText.text, out xx);
+        xx += 1;
+        stationText.text = xx.ToString();
         GameObject.FindGameObjectWithTag("Player").GetComponent<FirstPersonController>().enabled = false;
         GameObject.FindGameObjectWithTag("Player").GetComponent<MouseController>().enabled = false;
         Panel.SetActive(false);
@@ -100,13 +101,13 @@ public class WallTrigger_2 : MonoBehaviour
         Time.timeScale = 1f;
         personaje.PersonajeRestart();
         panelPersonaje.SetActive(false);
-        //panelEstrellas.SetActive(false);
         estrellas.SetActive(false);
         canvasDialogo.SetActive(false);
         GameObject.FindGameObjectWithTag("Player").GetComponent<FirstPersonController>().enabled = true;
         GameObject.FindGameObjectWithTag("Player").GetComponent<MouseController>().enabled = true;
         Panel.SetActive(true);
         mira.SetActive(true);
+        imagen.enabled = false;
         DestroyScriptInstance();
     }
 
@@ -263,9 +264,7 @@ public class WallTrigger_2 : MonoBehaviour
     public IEnumerator CargarInfo(int sid)
     {
 
-        //UnityWebRequest www = UnityWebRequest.Get("200.126.14.250/api/bpv/specie?name=" + "Iguana");
-        UnityWebRequest www = UnityWebRequest.Get("http://200.126.14.250/api/bpv/specie/" + sid + "/");
-        //Debug.Log("URL de la info:" + "200.126.14.250/api/bpv/specie?name=" + "Ardilla");
+        UnityWebRequest www = UnityWebRequest.Get(API + sid + "/");
         yield return www.SendWebRequest();
 
         if (www.isNetworkError || www.isHttpError)
@@ -282,7 +281,7 @@ public class WallTrigger_2 : MonoBehaviour
             }
             catch (System.Exception)
             {
-                Debug.Log("No hay datos de este árbol");
+                Debug.Log("No hay datos de esta especie");
             }
         }
 
@@ -292,8 +291,7 @@ public class WallTrigger_2 : MonoBehaviour
 
     public IEnumerator LoadImage(int id, int idSpecie)
     {
-        WWW wwwLoader = new WWW("http://200.126.14.250/api/bpv/specie/" + idSpecie + "/gallery/" + id + "/");
-        //Debug.Log("URL de la imagen: " + "200.126.14.250/api/bpv/specie/" + idSpecie + "/gallery/" + id + "/");
+        WWW wwwLoader = new WWW(API + idSpecie + "/gallery/" + id + "/");
         yield return wwwLoader;
 
         imagen.texture = wwwLoader.texture;

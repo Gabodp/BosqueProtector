@@ -443,81 +443,6 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 53756473}
   m_CullTransparentMesh: 0
---- !u!1 &54443729
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 54443730}
-  - component: {fileID: 54443732}
-  - component: {fileID: 54443731}
-  m_Layer: 0
-  m_Name: "Di\xE1logo personaje"
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &54443730
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 54443729}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10.5}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1329565618}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 3, y: 0}
-  m_SizeDelta: {x: 830, y: 430}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &54443731
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 54443729}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
-  m_RaycastTarget: 0
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 35
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 0
-    m_MaxSize: 50
-    m_Alignment: 0
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: 
---- !u!222 &54443732
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 54443729}
-  m_CullTransparentMesh: 0
 --- !u!1 &56398683
 GameObject:
   m_ObjectHideFlags: 0
@@ -1259,7 +1184,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -298, y: 0}
+  m_AnchoredPosition: {x: -143, y: 1}
   m_SizeDelta: {x: 124.2, y: 43}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &145006250
@@ -1549,7 +1474,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1969506690038558, guid: 65ef68f3ca4cc7f4aa4fdee7422c6d9a, type: 2}
       propertyPath: m_Name
-      value: Teca (1)
+      value: Teca
       objectReference: {fileID: 0}
     - target: {fileID: 23022665176233292, guid: 65ef68f3ca4cc7f4aa4fdee7422c6d9a,
         type: 2}
@@ -2283,7 +2208,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100122, guid: cfade936808e440439bff42525f9f2aa, type: 3}
       propertyPath: m_Name
-      value: TiranoTropical
+      value: Tirano Tropical
       objectReference: {fileID: 0}
     - target: {fileID: 13700000, guid: cfade936808e440439bff42525f9f2aa, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -2697,7 +2622,7 @@ MonoBehaviour:
   mira: {fileID: 4436023}
   estrellas: {fileID: 1363357168}
   personaje: {fileID: 279092463}
-  stationText: {fileID: 419226143}
+  stationText: {fileID: 1531090754}
   dialogoPersonaje: {fileID: 1895629047}
   cantidadEstrellas: {fileID: 2050545056}
   pregunta: {fileID: 102239760}
@@ -3115,7 +3040,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1969506690038558, guid: 65ef68f3ca4cc7f4aa4fdee7422c6d9a, type: 2}
       propertyPath: m_Name
-      value: "Fernan S\xE1nchez (6)"
+      value: "Fernan S\xE1nchez"
       objectReference: {fileID: 0}
     - target: {fileID: 1969506690038558, guid: 65ef68f3ca4cc7f4aa4fdee7422c6d9a, type: 2}
       propertyPath: m_IsActive
@@ -3213,7 +3138,7 @@ MonoBehaviour:
   Panel: {fileID: 1270687032}
   Galeria: {fileID: 1004792861}
   Panel3: {fileID: 1474856398}
-  specieName: Fernan
+  specieName: "Fernan S\xE1nchez"
 --- !u!65 &262853682
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3721,7 +3646,7 @@ MonoBehaviour:
   mira: {fileID: 4436023}
   estrellas: {fileID: 1363357168}
   personaje: {fileID: 279092463}
-  stationText: {fileID: 419226143}
+  stationText: {fileID: 1531090754}
   dialogoPersonaje: {fileID: 1895629047}
   cantidadEstrellas: {fileID: 2050545056}
   pregunta: {fileID: 2069975940}
@@ -4288,7 +4213,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1969506690038558, guid: 65ef68f3ca4cc7f4aa4fdee7422c6d9a, type: 2}
       propertyPath: m_Name
-      value: "Fernan S\xE1nchez (3)"
+      value: "Fernan S\xE1nchez"
       objectReference: {fileID: 0}
     - target: {fileID: 1969506690038558, guid: 65ef68f3ca4cc7f4aa4fdee7422c6d9a, type: 2}
       propertyPath: m_IsActive
@@ -4337,7 +4262,7 @@ MonoBehaviour:
   Panel: {fileID: 1270687032}
   Galeria: {fileID: 1004792861}
   Panel3: {fileID: 1474856398}
-  specieName: Fernan
+  specieName: "Fernan S\xE1nchez"
 --- !u!114 &335555044
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4633,7 +4558,7 @@ MonoBehaviour:
   mira: {fileID: 4436023}
   estrellas: {fileID: 1363357168}
   personaje: {fileID: 279092463}
-  stationText: {fileID: 419226143}
+  stationText: {fileID: 1531090754}
   dialogoPersonaje: {fileID: 1895629047}
   cantidadEstrellas: {fileID: 2050545056}
   pregunta: {fileID: 450066900}
@@ -5542,7 +5467,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1969506690038558, guid: 65ef68f3ca4cc7f4aa4fdee7422c6d9a, type: 2}
       propertyPath: m_Name
-      value: Ceibo (3)
+      value: Ceibo
       objectReference: {fileID: 0}
     - target: {fileID: 1969506690038558, guid: 65ef68f3ca4cc7f4aa4fdee7422c6d9a, type: 2}
       propertyPath: m_IsActive
@@ -5810,7 +5735,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1969506690038558, guid: 65ef68f3ca4cc7f4aa4fdee7422c6d9a, type: 2}
       propertyPath: m_Name
-      value: Guasmo (3)
+      value: Guasmo
       objectReference: {fileID: 0}
     - target: {fileID: 1969506690038558, guid: 65ef68f3ca4cc7f4aa4fdee7422c6d9a, type: 2}
       propertyPath: m_IsActive
@@ -5965,7 +5890,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1969506690038558, guid: 65ef68f3ca4cc7f4aa4fdee7422c6d9a, type: 2}
       propertyPath: m_Name
-      value: Bototillo (2)
+      value: Bototillo
       objectReference: {fileID: 0}
     - target: {fileID: 23022665176233292, guid: 65ef68f3ca4cc7f4aa4fdee7422c6d9a,
         type: 2}
@@ -8426,8 +8351,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 154.4, y: 0}
-  m_SizeDelta: {x: 561.4, y: 37.8}
+  m_AnchoredPosition: {x: 213, y: 3}
+  m_SizeDelta: {x: 164.2, y: 37.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &733273798
 MonoBehaviour:
@@ -8461,7 +8386,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 
+  m_Text: "Estaci\xF3n:"
 --- !u!222 &733273799
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8724,7 +8649,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1969506690038558, guid: 65ef68f3ca4cc7f4aa4fdee7422c6d9a, type: 2}
       propertyPath: m_Name
-      value: Pechiche (7)
+      value: Pechiche
       objectReference: {fileID: 0}
     - target: {fileID: 1969506690038558, guid: 65ef68f3ca4cc7f4aa4fdee7422c6d9a, type: 2}
       propertyPath: m_IsActive
@@ -9290,6 +9215,75 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 868988060}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &925024208
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 925024209}
+  - component: {fileID: 925024211}
+  - component: {fileID: 925024210}
+  m_Layer: 0
+  m_Name: RawImage
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &925024209
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 925024208}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1256797855}
+  m_Father: {fileID: 1670723927}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -581, y: -11}
+  m_SizeDelta: {x: 278.2, y: 513.3}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &925024210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 925024208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -98529514, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.754717, g: 0.754717, b: 0.754717, a: 0.392}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Texture: {fileID: 0}
+  m_UVRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+--- !u!222 &925024211
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 925024208}
+  m_CullTransparentMesh: 0
 --- !u!1001 &928549963
 Prefab:
   m_ObjectHideFlags: 0
@@ -9331,7 +9325,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100122, guid: cfade936808e440439bff42525f9f2aa, type: 3}
       propertyPath: m_Name
-      value: "Cabez\xF3nUnicolor"
+      value: "Cabez\xF3n Unicolor"
       objectReference: {fileID: 0}
     - target: {fileID: 13700000, guid: cfade936808e440439bff42525f9f2aa, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -10399,7 +10393,7 @@ MonoBehaviour:
   mira: {fileID: 4436023}
   estrellas: {fileID: 1363357168}
   personaje: {fileID: 279092463}
-  stationText: {fileID: 419226143}
+  stationText: {fileID: 1531090754}
   dialogoPersonaje: {fileID: 1895629047}
   cantidadEstrellas: {fileID: 2050545056}
   pregunta: {fileID: 280493589}
@@ -10566,8 +10560,8 @@ RectTransform:
   - {fileID: 294211762}
   - {fileID: 60867651}
   - {fileID: 4436024}
-  - {fileID: 1329565618}
   - {fileID: 1530033667}
+  - {fileID: 1670723927}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -10785,7 +10779,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1969506690038558, guid: 65ef68f3ca4cc7f4aa4fdee7422c6d9a, type: 2}
       propertyPath: m_Name
-      value: Guasmo (6)
+      value: Guasmo
       objectReference: {fileID: 0}
     - target: {fileID: 1969506690038558, guid: 65ef68f3ca4cc7f4aa4fdee7422c6d9a, type: 2}
       propertyPath: m_IsActive
@@ -11229,7 +11223,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100122, guid: cfade936808e440439bff42525f9f2aa, type: 3}
       propertyPath: m_Name
-      value: "B\xFAhoBlanquinegro"
+      value: "B\xFAho Blanquinegro"
       objectReference: {fileID: 0}
     - target: {fileID: 13700000, guid: cfade936808e440439bff42525f9f2aa, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -11633,11 +11627,14 @@ MonoBehaviour:
   station: {fileID: 1519116618}
   stationScreen: {fileID: 1471696681}
   panelPersonaje: {fileID: 1470876634}
-  canvasDialogo: {fileID: 2014518550}
+  canvasDialogo: {fileID: 1670723926}
   Panel: {fileID: 1474856398}
+  mira: {fileID: 4436023}
   stationText: {fileID: 419226143}
-  dialogoPersonaje: {fileID: 1895629047}
+  dialogoPersonaje: {fileID: 1858161691}
   cantidadEstrellas: {fileID: 2050545056}
+  cantidadDesafios: {fileID: 1177076736}
+  cantidadEstaciones: {fileID: 1531090754}
 --- !u!114 &1018493209
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11932,7 +11929,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100122, guid: cfade936808e440439bff42525f9f2aa, type: 3}
       propertyPath: m_Name
-      value: "Gavil\xE1nGris"
+      value: "Gavil\xE1n Gris"
       objectReference: {fileID: 0}
     - target: {fileID: 13700000, guid: cfade936808e440439bff42525f9f2aa, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -12719,7 +12716,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100122, guid: cfade936808e440439bff42525f9f2aa, type: 3}
       propertyPath: m_Name
-      value: "MomotoGrit\xF3n"
+      value: "Momoto Grit\xF3n"
       objectReference: {fileID: 0}
     - target: {fileID: 13700000, guid: cfade936808e440439bff42525f9f2aa, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -13102,7 +13099,7 @@ MonoBehaviour:
   Panel: {fileID: 1270687032}
   Galeria: {fileID: 1004792861}
   Panel3: {fileID: 1474856398}
-  specieName: 
+  specieName: Tangara Azul y Gris
 --- !u!65 &1137752019
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13156,7 +13153,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100122, guid: cfade936808e440439bff42525f9f2aa, type: 3}
       propertyPath: m_Name
-      value: Tangaraazulygris
+      value: Tangara Azul y Gris
       objectReference: {fileID: 0}
     - target: {fileID: 13700000, guid: cfade936808e440439bff42525f9f2aa, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -13452,7 +13449,7 @@ MonoBehaviour:
   Panel: {fileID: 1270687032}
   Galeria: {fileID: 1004792861}
   Panel3: {fileID: 1474856398}
-  specieName: 
+  specieName: Tangara Azul y Gris
 --- !u!65 &1157793715
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13795,7 +13792,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -193, y: -1}
+  m_AnchoredPosition: {x: -37, y: 0}
   m_SizeDelta: {x: 70, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1177076735
@@ -14010,7 +14007,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -120, y: -1}
+  m_AnchoredPosition: {x: 37, y: 1}
   m_SizeDelta: {x: 173, y: 46.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1229216944
@@ -14094,7 +14091,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1969506690038558, guid: 65ef68f3ca4cc7f4aa4fdee7422c6d9a, type: 2}
       propertyPath: m_Name
-      value: Teca (7)
+      value: Teca
       objectReference: {fileID: 0}
     - target: {fileID: 23022665176233292, guid: 65ef68f3ca4cc7f4aa4fdee7422c6d9a,
         type: 2}
@@ -14263,7 +14260,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1969506690038558, guid: 65ef68f3ca4cc7f4aa4fdee7422c6d9a, type: 2}
       propertyPath: m_Name
-      value: Pechiche (5)
+      value: Pechiche
       objectReference: {fileID: 0}
     - target: {fileID: 1969506690038558, guid: 65ef68f3ca4cc7f4aa4fdee7422c6d9a, type: 2}
       propertyPath: m_IsActive
@@ -14292,6 +14289,94 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 65ef68f3ca4cc7f4aa4fdee7422c6d9a, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &1256797854
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1256797855}
+  - component: {fileID: 1256797858}
+  - component: {fileID: 1256797857}
+  - component: {fileID: 1256797856}
+  m_Layer: 0
+  m_Name: Personaje
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1256797855
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1256797854}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 2.046287, y: 2.436291, z: 1}
+  m_Children: []
+  m_Father: {fileID: 925024209}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -11.650879, y: -7.1682935}
+  m_SizeDelta: {x: 120, y: 160}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!95 &1256797856
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1256797854}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6b20ca6b9ef80aa4fa1ddbbab85823a0, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1256797857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1256797854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 21300000, guid: 8d85b6494e1b7884d87e633c57c1fea5, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &1256797858
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1256797854}
+  m_CullTransparentMesh: 0
 --- !u!1001 &1258721488
 Prefab:
   m_ObjectHideFlags: 0
@@ -14333,7 +14418,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1969506690038558, guid: 65ef68f3ca4cc7f4aa4fdee7422c6d9a, type: 2}
       propertyPath: m_Name
-      value: Bototillo (4)
+      value: Bototillo
       objectReference: {fileID: 0}
     - target: {fileID: 23022665176233292, guid: 65ef68f3ca4cc7f4aa4fdee7422c6d9a,
         type: 2}
@@ -14813,7 +14898,7 @@ MonoBehaviour:
   mira: {fileID: 4436023}
   estrellas: {fileID: 1363357168}
   personaje: {fileID: 279092463}
-  stationText: {fileID: 419226143}
+  stationText: {fileID: 1531090754}
   dialogoPersonaje: {fileID: 1895629047}
   cantidadEstrellas: {fileID: 2050545056}
   pregunta: {fileID: 271707027}
@@ -14938,7 +15023,7 @@ MonoBehaviour:
   Panel: {fileID: 1270687032}
   Galeria: {fileID: 1004792861}
   Panel3: {fileID: 1474856398}
-  specieName: 
+  specieName: Garcilla Estriada
 --- !u!1 &1305815320
 GameObject:
   m_ObjectHideFlags: 0
@@ -15191,76 +15276,6 @@ RectTransform:
   m_AnchoredPosition: {x: -9.145519, y: 2.2419999}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &1329565617
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1329565618}
-  - component: {fileID: 1329565620}
-  - component: {fileID: 1329565619}
-  m_Layer: 0
-  m_Name: "Canvas di\xE1logo final"
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!224 &1329565618
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1329565617}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.48869, y: 0.41046, z: 1}
-  m_Children:
-  - {fileID: 54443730}
-  m_Father: {fileID: 953163072}
-  m_RootOrder: 12
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 53.899963, y: 7.100006}
-  m_SizeDelta: {x: 130.59998, y: 89.89996}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1329565619
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1329565617}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.92941177, g: 0.94509804, b: 0.9019608, a: 0.9529412}
-  m_RaycastTarget: 0
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
---- !u!222 &1329565620
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1329565617}
-  m_CullTransparentMesh: 0
 --- !u!1 &1341035718
 GameObject:
   m_ObjectHideFlags: 0
@@ -15633,7 +15648,7 @@ MonoBehaviour:
   Panel: {fileID: 1270687032}
   Galeria: {fileID: 1004792861}
   Panel3: {fileID: 1474856398}
-  specieName: 
+  specieName: "Momoto Grit\xF3n"
 --- !u!65 &1364096186
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15755,7 +15770,7 @@ MonoBehaviour:
   Panel: {fileID: 1270687032}
   Galeria: {fileID: 1004792861}
   Panel3: {fileID: 1474856398}
-  specieName: 
+  specieName: Garcilla Estriada
 --- !u!65 &1376719936
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15932,7 +15947,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100122, guid: cfade936808e440439bff42525f9f2aa, type: 3}
       propertyPath: m_Name
-      value: "Pinz\xF3nSabaneroAzafranado"
+      value: "Pinz\xF3n Sabanero Azafranado"
       objectReference: {fileID: 0}
     - target: {fileID: 13700000, guid: cfade936808e440439bff42525f9f2aa, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -16228,7 +16243,7 @@ MonoBehaviour:
   Panel: {fileID: 1270687032}
   Galeria: {fileID: 1004792861}
   Panel3: {fileID: 1474856398}
-  specieName: "Pinz\xF3n Sabanero Azafranado"
+  specieName: "Pinz\xF3n Sabanero"
 --- !u!65 &1380541331
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16349,6 +16364,8 @@ RectTransform:
   - {fileID: 1177076734}
   - {fileID: 1229216943}
   - {fileID: 733273797}
+  - {fileID: 1531090752}
+  - {fileID: 1672061739}
   m_Father: {fileID: 953163072}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -16827,7 +16844,7 @@ MonoBehaviour:
   Panel: {fileID: 1270687032}
   Galeria: {fileID: 1004792861}
   Panel3: {fileID: 1474856398}
-  specieName: 
+  specieName: Garcilla Estriada
 --- !u!65 &1438565694
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17277,7 +17294,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100122, guid: cfade936808e440439bff42525f9f2aa, type: 3}
       propertyPath: m_Name
-      value: GarrapateroPiquiestriado
+      value: Garrapatero Piquiestriado
       objectReference: {fileID: 0}
     - target: {fileID: 13700000, guid: cfade936808e440439bff42525f9f2aa, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -17573,7 +17590,7 @@ MonoBehaviour:
   Panel: {fileID: 1270687032}
   Galeria: {fileID: 1004792861}
   Panel3: {fileID: 1474856398}
-  specieName: 
+  specieName: Garrapatero Piquiestriado
 --- !u!65 &1486532059
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17863,7 +17880,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100122, guid: cfade936808e440439bff42525f9f2aa, type: 3}
       propertyPath: m_Name
-      value: MosqueroRayado
+      value: Mosquero Rayado
       objectReference: {fileID: 0}
     - target: {fileID: 13700000, guid: cfade936808e440439bff42525f9f2aa, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -18159,7 +18176,7 @@ MonoBehaviour:
   Panel: {fileID: 1270687032}
   Galeria: {fileID: 1004792861}
   Panel3: {fileID: 1474856398}
-  specieName: 
+  specieName: Mosquero Rayado
 --- !u!65 &1497109514
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18608,7 +18625,7 @@ RectTransform:
   - {fileID: 174892190}
   - {fileID: 2040926323}
   m_Father: {fileID: 953163072}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -18648,6 +18665,96 @@ CanvasRenderer:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1530033666}
+  m_CullTransparentMesh: 0
+--- !u!1 &1531090751
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1531090752}
+  - component: {fileID: 1531090755}
+  - component: {fileID: 1531090754}
+  - component: {fileID: 1531090753}
+  m_Layer: 5
+  m_Name: Nestaciones
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1531090752
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1531090751}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.0468, y: 1.0468, z: 1.0468}
+  m_Children: []
+  m_Father: {fileID: 1402513727}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 314, y: 1}
+  m_SizeDelta: {x: 70, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1531090753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1531090751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -900027084, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
+--- !u!114 &1531090754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1531090751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 0
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 1
+    m_BestFit: 1
+    m_MinSize: 1
+    m_MaxSize: 40
+    m_Alignment: 3
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 0
+--- !u!222 &1531090755
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1531090751}
   m_CullTransparentMesh: 0
 --- !u!1 &1546947304
 GameObject:
@@ -20014,6 +20121,152 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1667958302}
   m_CullTransparentMesh: 0
+--- !u!1 &1670723926
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1670723927}
+  - component: {fileID: 1670723929}
+  - component: {fileID: 1670723928}
+  m_Layer: 0
+  m_Name: "Canvas di\xE1logo final"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1670723927
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1670723926}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.48869, y: 0.41046, z: 1}
+  m_Children:
+  - {fileID: 1858161690}
+  - {fileID: 925024209}
+  m_Father: {fileID: 953163072}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 24.900024, y: 0.69641113}
+  m_SizeDelta: {x: 546.19995, y: 371.59998}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1670723928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1670723926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.92941177, g: 0.94509804, b: 0.9019608, a: 0.9529412}
+  m_RaycastTarget: 0
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &1670723929
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1670723926}
+  m_CullTransparentMesh: 0
+--- !u!1 &1672061738
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1672061739}
+  - component: {fileID: 1672061741}
+  - component: {fileID: 1672061740}
+  m_Layer: 5
+  m_Name: TotalE
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1672061739
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1672061738}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1402513727}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 389, y: 2}
+  m_SizeDelta: {x: 173, y: 46.2}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1672061740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1672061738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 28
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 2
+    m_MaxSize: 40
+    m_Alignment: 3
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: de 6
+--- !u!222 &1672061741
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1672061738}
+  m_CullTransparentMesh: 0
 --- !u!1001 &1672245833
 Prefab:
   m_ObjectHideFlags: 0
@@ -20343,7 +20596,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1969506690038558, guid: 65ef68f3ca4cc7f4aa4fdee7422c6d9a, type: 2}
       propertyPath: m_Name
-      value: Ceibo (5)
+      value: Ceibo
       objectReference: {fileID: 0}
     - target: {fileID: 1969506690038558, guid: 65ef68f3ca4cc7f4aa4fdee7422c6d9a, type: 2}
       propertyPath: m_IsActive
@@ -20429,7 +20682,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 141256, guid: b4806bcfd71324778b360c0299195b34, type: 2}
       propertyPath: m_Name
-      value: Iguana (2)
+      value: Iguana
       objectReference: {fileID: 0}
     - target: {fileID: 13662094, guid: b4806bcfd71324778b360c0299195b34, type: 2}
       propertyPath: m_Radius
@@ -20995,7 +21248,7 @@ MonoBehaviour:
   Panel: {fileID: 1270687032}
   Galeria: {fileID: 1004792861}
   Panel3: {fileID: 1474856398}
-  specieName: 
+  specieName: "Gavil\xE1n Gris"
 --- !u!65 &1748338975
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21241,7 +21494,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1969506690038558, guid: 65ef68f3ca4cc7f4aa4fdee7422c6d9a, type: 2}
       propertyPath: m_Name
-      value: Teca (2)
+      value: Teca
       objectReference: {fileID: 0}
     - target: {fileID: 23022665176233292, guid: 65ef68f3ca4cc7f4aa4fdee7422c6d9a,
         type: 2}
@@ -21384,7 +21637,7 @@ MonoBehaviour:
   Panel: {fileID: 1270687032}
   Galeria: {fileID: 1004792861}
   Panel3: {fileID: 1474856398}
-  specieName: 
+  specieName: "B\xFAho Blanquinegro"
 --- !u!65 &1768288171
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21832,7 +22085,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100122, guid: cfade936808e440439bff42525f9f2aa, type: 3}
       propertyPath: m_Name
-      value: Tangaraazulygris
+      value: Tangara Azul y Gris
       objectReference: {fileID: 0}
     - target: {fileID: 13700000, guid: cfade936808e440439bff42525f9f2aa, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -22150,7 +22403,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1969506690038558, guid: 65ef68f3ca4cc7f4aa4fdee7422c6d9a, type: 2}
       propertyPath: m_Name
-      value: Pechiche (2)
+      value: Pechiche
       objectReference: {fileID: 0}
     - target: {fileID: 1969506690038558, guid: 65ef68f3ca4cc7f4aa4fdee7422c6d9a, type: 2}
       propertyPath: m_IsActive
@@ -22194,7 +22447,7 @@ MonoBehaviour:
   Panel: {fileID: 1270687032}
   Galeria: {fileID: 1004792861}
   Panel3: {fileID: 1474856398}
-  specieName: 
+  specieName: Tirano Tropical
 --- !u!65 &1831582904
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22445,7 +22698,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1849097173}
   m_LocalRotation: {x: 0.003918007, y: 0.4291004, z: -0.055107966, w: 0.9015657}
-  m_LocalPosition: {x: -26.6, y: 6.248, z: 28.749}
+  m_LocalPosition: {x: -23.53, y: 2.33, z: 25.45}
   m_LocalScale: {x: 0.20000026, y: 4, z: 18.000101}
   m_Children: []
   m_Father: {fileID: 338562483}
@@ -22524,6 +22777,81 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1849097173}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1858161689
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1858161690}
+  - component: {fileID: 1858161692}
+  - component: {fileID: 1858161691}
+  m_Layer: 0
+  m_Name: "Di\xE1logo personaje"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1858161690
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1858161689}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -10.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1670723927}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 145, y: 29}
+  m_SizeDelta: {x: 878.6, y: 446.1}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1858161691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1858161689}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 0
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 38
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 50
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 
+--- !u!222 &1858161692
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1858161689}
+  m_CullTransparentMesh: 0
 --- !u!1 &1858380411 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100122, guid: cfade936808e440439bff42525f9f2aa,
@@ -22543,7 +22871,7 @@ MonoBehaviour:
   Panel: {fileID: 1270687032}
   Galeria: {fileID: 1004792861}
   Panel3: {fileID: 1474856398}
-  specieName: 
+  specieName: "Cabez\xF3n Unicolor"
 --- !u!65 &1858380414
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23063,7 +23391,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1969506690038558, guid: 65ef68f3ca4cc7f4aa4fdee7422c6d9a, type: 2}
       propertyPath: m_Name
-      value: Teca (6)
+      value: Teca
       objectReference: {fileID: 0}
     - target: {fileID: 23022665176233292, guid: 65ef68f3ca4cc7f4aa4fdee7422c6d9a,
         type: 2}
@@ -23482,7 +23810,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1969506690038558, guid: 65ef68f3ca4cc7f4aa4fdee7422c6d9a, type: 2}
       propertyPath: m_Name
-      value: Ceibo (4)
+      value: Ceibo
       objectReference: {fileID: 0}
     - target: {fileID: 1969506690038558, guid: 65ef68f3ca4cc7f4aa4fdee7422c6d9a, type: 2}
       propertyPath: m_IsActive
@@ -23706,7 +24034,7 @@ MonoBehaviour:
   Panel: {fileID: 1270687032}
   Galeria: {fileID: 1004792861}
   Panel3: {fileID: 1474856398}
-  specieName: 
+  specieName: "Gavil\xE1n Dorsigris"
 --- !u!65 &1903078084
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24038,7 +24366,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100122, guid: cfade936808e440439bff42525f9f2aa, type: 3}
       propertyPath: m_Name
-      value: "Gavil\xE1nDorsigris"
+      value: "Gavil\xE1n Dorsigris"
       objectReference: {fileID: 0}
     - target: {fileID: 13700000, guid: cfade936808e440439bff42525f9f2aa, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -25296,7 +25624,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1969506690038558, guid: 65ef68f3ca4cc7f4aa4fdee7422c6d9a, type: 2}
       propertyPath: m_Name
-      value: Ceibo (6)
+      value: Ceibo
       objectReference: {fileID: 0}
     - target: {fileID: 1969506690038558, guid: 65ef68f3ca4cc7f4aa4fdee7422c6d9a, type: 2}
       propertyPath: m_IsActive
@@ -25826,7 +26154,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1969506690038558, guid: 65ef68f3ca4cc7f4aa4fdee7422c6d9a, type: 2}
       propertyPath: m_Name
-      value: Ceibo (1)
+      value: Ceibo
       objectReference: {fileID: 0}
     - target: {fileID: 1969506690038558, guid: 65ef68f3ca4cc7f4aa4fdee7422c6d9a, type: 2}
       propertyPath: m_IsActive
@@ -25971,7 +26299,7 @@ MonoBehaviour:
   mira: {fileID: 4436023}
   estrellas: {fileID: 1363357168}
   personaje: {fileID: 279092463}
-  stationText: {fileID: 419226143}
+  stationText: {fileID: 1531090754}
   dialogoPersonaje: {fileID: 1895629047}
   cantidadEstrellas: {fileID: 2050545056}
   pregunta: {fileID: 1482755200}
@@ -26081,7 +26409,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100122, guid: cfade936808e440439bff42525f9f2aa, type: 3}
       propertyPath: m_Name
-      value: GarrapateroPiquiestriado
+      value: Garrapatero Piquiestriado
       objectReference: {fileID: 0}
     - target: {fileID: 13700000, guid: cfade936808e440439bff42525f9f2aa, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -26377,7 +26705,7 @@ MonoBehaviour:
   Panel: {fileID: 1270687032}
   Galeria: {fileID: 1004792861}
   Panel3: {fileID: 1474856398}
-  specieName: 
+  specieName: Garrapatero Piquiestriado
 --- !u!65 &2115642754
 BoxCollider:
   m_ObjectHideFlags: 0
