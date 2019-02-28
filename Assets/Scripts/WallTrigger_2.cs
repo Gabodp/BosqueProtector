@@ -28,6 +28,7 @@ public class WallTrigger_2 : MonoBehaviour
     public RawImage imagen;
     private SpecieObject tmp = null;
     public int n_estacion;
+    public Text skip;
 
     void Start()
     {
@@ -50,6 +51,11 @@ public class WallTrigger_2 : MonoBehaviour
             begin = false;
 
         }
+
+        if (Input.GetKeyUp(KeyCode.Q))
+        {
+            Continuar();
+        }
     }
 
     void DestroyScriptInstance()
@@ -69,6 +75,7 @@ public class WallTrigger_2 : MonoBehaviour
 
     IEnumerator Preguntas()
     {
+        skip.enabled = false;
         int xx = 0;
         int.TryParse(stationText.text, out xx);
         xx += 1;
@@ -98,6 +105,7 @@ public class WallTrigger_2 : MonoBehaviour
     public void Continuar()
     {
         begin = false;
+        skip.enabled = false;
         Time.timeScale = 1f;
         personaje.PersonajeRestart();
         panelPersonaje.SetActive(false);
@@ -125,6 +133,7 @@ public class WallTrigger_2 : MonoBehaviour
 
     IEnumerator RespuestaIncorrecta()
     {
+        skip.enabled = true;
         canvasRespuestas.SetActive(false);
         panelEstrellas.SetActive(true);
         imagen.enabled = true;
@@ -133,12 +142,13 @@ public class WallTrigger_2 : MonoBehaviour
         Debug.Log("triste");
         texto = "\n \n \n \n" + "Respuesta correcta: " + respuesta + "\n \n" + feedback;
         StartCoroutine(Dialogo(canvasDialogo, dialogoPersonaje, texto));
-        yield return new WaitForSeconds(25.0f);
+        yield return new WaitForSeconds(20.0f);
         Continuar();
     }
 
     IEnumerator RespuestaCorrecta()
     {
+        skip.enabled = true;
         canvasRespuestas.SetActive(false);
         panelEstrellas.SetActive(true);
         estrellas.SetActive(true);
@@ -155,7 +165,7 @@ public class WallTrigger_2 : MonoBehaviour
         y += 1;
         cantidadEstrellas.text = x.ToString();
         desafio.text = y.ToString();
-        yield return new WaitForSeconds(25.0f);
+        yield return new WaitForSeconds(20.0f);
         Continuar();
     }
 

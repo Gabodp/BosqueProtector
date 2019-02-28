@@ -57,7 +57,7 @@ public class Final : MonoBehaviour {
         GameObject.FindGameObjectWithTag("Player").GetComponent<MouseController>().enabled = false;
         Panel.SetActive(false);
         mira.SetActive(false);
-        panelPersonaje.SetActive(true);
+        //panelPersonaje.SetActive(true);
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
         Time.timeScale = 1f;
