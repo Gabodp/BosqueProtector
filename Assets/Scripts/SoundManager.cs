@@ -28,6 +28,16 @@ public class SoundManager : MonoBehaviour {
 	}
 
 	public void PauseAudio(){
-		StopAudio();
+
+        try
+        {
+            StopAudio();
+        }
+        catch (EntryPointNotFoundException e)
+        {
+            Debug.Log("No se pudo cargar audio");
+            Debug.Log(e.StackTrace);
+        }
+        
 	}
 }

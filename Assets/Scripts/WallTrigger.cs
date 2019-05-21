@@ -8,7 +8,6 @@ public class WallTrigger : MonoBehaviour
     public Estacion station;
     public GameObject stationScreen;
     public Text stationText;
-    public Text nameStation;
     
     void OnTriggerEnter(Collider obj)
     {
@@ -21,7 +20,6 @@ public class WallTrigger : MonoBehaviour
                 if (MapManager.diccionarioNombre.ContainsKey(station.ID))
                 {
                     stationText.text = MapManager.diccionarioNombre[station.ID];
-                    nameStation.text = MapManager.diccionarioNombre[station.ID];
                     StartCoroutine(LateCall());
                     Debug.Log(MapManager.diccionarioID[station.ID]);
                     GameObject.Find("Audio").GetComponent<SoundManager>().PlayAudio(MapManager.diccionarioID[station.ID]);
