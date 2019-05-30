@@ -43,8 +43,11 @@ public class RestClient : MonoBehaviour {
                     Debug.Log(jsonResult);
                     PreguntaObject[] preguntaList = JsonHelper.getJsonArray<PreguntaObject>(jsonResult);
                     List<PreguntaObject> lista = new List<PreguntaObject>(preguntaList);
-                    PreguntaObjectList lista_final = new PreguntaObjectList();
-                    lista_final.preguntas = lista;
+                    PreguntaObjectList lista_final = new PreguntaObjectList
+                    {
+                        preguntas = lista
+                    };
+                    //lista_final.preguntas = lista;
 
                     callBack(lista_final);
                 }

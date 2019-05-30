@@ -14,7 +14,7 @@ public class JsonHelper
     [System.Serializable]
     private class Wrapper<T>
     {
-        public T[] array;
+        public T[] array = null;
     }
     
 }

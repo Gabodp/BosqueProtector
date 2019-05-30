@@ -21,6 +21,7 @@ public class SoundManager : MonoBehaviour {
 	public void PlayAudio(int id){
 		try {
 			StartAudio(id);
+            Debug.Log("audio cargado");
 		} catch (EntryPointNotFoundException e) {
 			Debug.Log("No se pudo cargar audio");
 			Debug.Log(e.StackTrace);

@@ -57,7 +57,6 @@ public class Final : MonoBehaviour {
         GameObject.FindGameObjectWithTag("Player").GetComponent<MouseController>().enabled = false;
         Panel.SetActive(false);
         mira.SetActive(false);
-        //panelPersonaje.SetActive(true);
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
         Time.timeScale = 1f;
@@ -70,7 +69,7 @@ public class Final : MonoBehaviour {
         int.TryParse(cantidadEstaciones.text, out stations);
 
         texto = "Felicidades has completado el recorrido con exito !!!";
-        nestrellas = "\n \n - Conseguiste " + stars.ToString() + " estrellas";
+        nestrellas = "\n \n - Conseguiste " + stars.ToString() + " hojas";
         ndesafios = "\n \n - Desafios completados correctamente " + challenges.ToString() + " de 6";
         nestaciones = "\n \n - Estaciones visitadas " + stations.ToString() + " de 6";
         final = texto + nestrellas + ndesafios + nestaciones;

@@ -11,7 +11,7 @@ public class WallTrigger_2 : MonoBehaviour
 {
 
     public Estacion station;
-    public GameObject stationScreen, panelPersonaje, panelEstrellas, canvasDialogo, canvasRespuestas, Panel, mira, estrellas;
+    public GameObject stationScreen, panelPersonaje, canvasDialogo, canvasRespuestas, Panel, mira, leaves;
     public CharacterQuestions personaje;
     public Text stationText, dialogoPersonaje, cantidadEstrellas, pregunta, desafio;
     private string texto;
@@ -78,7 +78,7 @@ public class WallTrigger_2 : MonoBehaviour
         GameObject.FindGameObjectWithTag("Player").GetComponent<MouseController>().enabled = false;
         Panel.SetActive(false);
         mira.SetActive(false);
-        estrellas.SetActive(false);
+        leaves.SetActive(false);
         imagen.enabled = false;
         panelPersonaje.SetActive(true);
         Cursor.lockState = CursorLockMode.None;
@@ -89,7 +89,7 @@ public class WallTrigger_2 : MonoBehaviour
         m_opcionB.onClick.AddListener(delegate { Wrapper(value_B); });
         m_opcionC.onClick.AddListener(delegate { Wrapper(value_C); });
         m_opcionD.onClick.AddListener(delegate { Wrapper(value_D); });
-        texto = "Hola, veamos si has prestado atencion, a ver si puedes con el siguiente desafio";
+        texto = "Hola, veamos si has prestado atencion, a ver si puedes contestar la siguiente pregunta";
         StartCoroutine(Dialogo(canvasDialogo, dialogoPersonaje, texto));
         yield return new WaitForSeconds(10.0f);
         canvasDialogo.SetActive(false);
@@ -102,7 +102,7 @@ public class WallTrigger_2 : MonoBehaviour
         Time.timeScale = 1f;
         personaje.PersonajeRestart();
         panelPersonaje.SetActive(false);
-        estrellas.SetActive(false);
+        leaves.SetActive(false);
         canvasDialogo.SetActive(false);
         GameObject.FindGameObjectWithTag("Player").GetComponent<FirstPersonController>().enabled = true;
         GameObject.FindGameObjectWithTag("Player").GetComponent<MouseController>().enabled = true;
@@ -127,12 +127,12 @@ public class WallTrigger_2 : MonoBehaviour
     IEnumerator RespuestaIncorrecta()
     {
         canvasRespuestas.SetActive(false);
-        panelEstrellas.SetActive(true);
+        
         imagen.enabled = true;
         canvasDialogo.SetActive(true);
         personaje.PersonajeTriste();
         Debug.Log("triste");
-        texto = "\n \n \n \n" + "Respuesta correcta: " + respuesta + "\n \n" + feedback;
+        texto = "\n \n \n \n" + "Vaya esta vez no has tenido suerte la respuesta correcta es: " + respuesta + "\n \n" + feedback;
         StartCoroutine(Dialogo(canvasDialogo, dialogoPersonaje, texto));
         yield return new WaitForSeconds(13.0f);
         Continuar();
@@ -141,12 +141,12 @@ public class WallTrigger_2 : MonoBehaviour
     IEnumerator RespuestaCorrecta()
     {
         canvasRespuestas.SetActive(false);
-        panelEstrellas.SetActive(true);
-        estrellas.SetActive(true);
+        
+        leaves.SetActive(true);
         imagen.enabled = true;
         canvasDialogo.SetActive(true);
         personaje.PersonajeFeliz();
-        texto = "\n \n \n \n" + "Respuesta correcta: " + respuesta + "\n \n" + feedback;
+        texto = "\n \n \n \n" + "Felicidades tu respuesta: " + respuesta + " es correcta.\n \n" + feedback;
         StartCoroutine(Dialogo(canvasDialogo, dialogoPersonaje, texto));
         int x = 0;
         int y = 0;
@@ -292,10 +292,16 @@ public class WallTrigger_2 : MonoBehaviour
 
     public IEnumerator LoadImage(int id, int idSpecie)
     {
-        WWW wwwLoader = new WWW(API + idSpecie + "/gallery/" + id + "/");
-        yield return wwwLoader;
-
-        imagen.texture = wwwLoader.texture;
+        UnityWebRequest w = UnityWebRequestTexture.GetTexture(API + idSpecie + "/gallery/" + id + "/");
+        yield return w.SendWebRequest();
+        if (w.isNetworkError || w.isHttpError)
+        {
+            Debug.Log(w.error);
+        }
+        else
+        {
+            imagen.texture = ((DownloadHandlerTexture)w.downloadHandler).texture;
+        }
     }
 
     public void GetSpecies() {

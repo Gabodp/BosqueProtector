@@ -70,12 +70,19 @@ public class Galery : MonoBehaviour {
 	}
 
 	public IEnumerator LoadImage(int id) {
-		WWW wwwLoader = new WWW(image_url + tree.Id + "/gallery/" + id + "/");
-		Debug.Log("URL de la imagen: " + image_url + treeID + "/gallery/" + id + "/");
-		yield return wwwLoader;
 
-		imagen.texture = wwwLoader.texture;
-	}
+        UnityWebRequest w = UnityWebRequestTexture.GetTexture(image_url + tree.Id + "/gallery/" + id + "/");
+        Debug.Log("URL de la imagen: " + image_url + treeID + "/gallery/" + id + "/");
+        yield return w.SendWebRequest();
+        if (w.isNetworkError || w.isHttpError)
+        {
+            Debug.Log(w.error);
+        }
+        else
+        {
+            imagen.texture = ((DownloadHandlerTexture)w.downloadHandler).texture;
+        }
+    }
 }
 
 [Serializable]
@@ -87,9 +94,3 @@ public class Arbol {
 	public Gallery[] Gallery;
 }
 
-/*[Serializable]
-public class Gallery {
-	public string PhotoId;
-	public int Id;
-	public string Description;
-}*/

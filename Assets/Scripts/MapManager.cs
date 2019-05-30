@@ -42,7 +42,7 @@ public class Stations
 }
 
 public class MapManager : MonoBehaviour {
-	public Character character;
+    public Character character;
 	public Pin PinInicio;
 	public Text Estacion;
 	public Text Cargando;
@@ -58,8 +58,8 @@ public class MapManager : MonoBehaviour {
 
 	[DllImport("__Internal")]
     private static extern string GetTemperature(int station_id);
-	
-	private void Start(){
+
+    private void Start(){
 		StartCoroutine(GetStations());
 		Panel.SetActive(false);
 		character.Iniciar(this, PinInicio);
