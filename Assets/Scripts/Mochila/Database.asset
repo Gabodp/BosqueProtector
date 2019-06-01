@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec0c593addcdf154fb6202d8cf0dcc88, type: 3}
+  m_Name: Database
+  m_EditorClassIdentifier: 
+  items:
+  - id: 1
+    name: Raton
+    description: Roedor que vive en el bosque
+    isStackable: 1
+    itemType: 0
+    scrollPos: {x: 0, y: 0}
+    itemImage: {fileID: 21300000, guid: 11b2b8bd5edb86347a5fcd9dfa46ac55, type: 3}
+  - id: 2
+    name: Salamandra
+    description: Reptil que vive en el bosque
+    isStackable: 1
+    itemType: 0
+    scrollPos: {x: 0, y: 0}
+    itemImage: {fileID: 21300000, guid: 0e0c3412f29f4c0408d9545b36a1b8f1, type: 3}

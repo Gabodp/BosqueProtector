@@ -6,7 +6,7 @@ public class ChallengePass : MonoBehaviour
 {
     private void Update()
     {
-        Debug.Log(Pick.recogidos);
+        //Debug.Log(Pick.recogidos);
         if (Pick.recogidos == 3)
         {
             this.GetComponent<Collider>().isTrigger = true;

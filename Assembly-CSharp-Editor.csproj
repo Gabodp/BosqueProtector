@@ -96,6 +96,9 @@
     <Compile Include="Assets\GreenForest\PostProcessing\Editor\Utils\EditorResources.cs" />
     <Compile Include="Assets\GreenForest\PostProcessing\Editor\Utils\FxStyles.cs" />
     <Compile Include="Assets\GreenForest\PostProcessing\Editor\Utils\ReflectionUtils.cs" />
+    <Compile Include="Assets\Scripts\Editor\DatabaseEditor.cs" />
+    <Compile Include="Assets\Scripts\Editor\ItemModifyWindow.cs" />
+    <Compile Include="Assets\Scripts\Editor\ItemWindow.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>E:/fase4/BosqueProtector/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
