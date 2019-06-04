@@ -120,6 +120,7 @@
     <Compile Include="Assets\Scripts\BarChallenge.cs" />
     <Compile Include="Assets\Scripts\ChallengePass.cs" />
     <Compile Include="Assets\Scripts\ChallengeTrigger.cs" />
+    <Compile Include="Assets\Scripts\ChallengeVerification.cs" />
     <Compile Include="Assets\Scripts\Character.cs" />
     <Compile Include="Assets\Scripts\CharacterQuestions.cs" />
     <Compile Include="Assets\Scripts\ClickMouse.cs" />
