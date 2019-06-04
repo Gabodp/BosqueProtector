@@ -57,7 +57,7 @@ public class SlotInfo
     public bool isEmpty;
     public int itemId;
     public int amount;
-    public int maxAmount = 10;
+    public int maxAmount = 3;
 
     public void EmptySlot()
     {

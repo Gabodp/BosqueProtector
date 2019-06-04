@@ -12,7 +12,7 @@ public class Inventory : MonoBehaviour
     [SerializeField]
     private Transform InventoryPanel; //Referencia al Panel de Inventario
     [SerializeField]
-    private List<SlotInfo> slotInfoList; // Lista con la informacion de todos los slots (inventario propiamente dicho)
+    private List<SlotInfo> slotInfoList; // Lista con la informacion de todos los slots (inventario)
     [SerializeField]
     private int capacity; //capacidad de mi inventario
 
@@ -101,7 +101,7 @@ public class Inventory : MonoBehaviour
 
     public void AddItem(int itemId)
     {
-        Item item = database.FindItemInDatabase(itemId); //buscar en la base de datos
+        Item item = database.FindItemInDatabase(itemId); //busco en la base de datos
         if (item != null)
         {
             SlotInfo slotInfo = FindSuitableSlot(itemId);
@@ -159,7 +159,7 @@ public class Inventory : MonoBehaviour
 
     public void SwapSlots(int id_o, int id_d, Transform image_o, Transform image_d)
     {
-        //intercambio IMAGENES
+        //intercambio las imagenes
         image_o.SetParent(InventoryPanel.GetChild(id_d));
         image_d.SetParent(InventoryPanel.GetChild(id_o));
         image_o.localPosition = Vector3.zero;
@@ -170,13 +170,13 @@ public class Inventory : MonoBehaviour
             SlotInfo origin = slotInfoList[id_o];
             SlotInfo destination = slotInfoList[id_d];
 
-            //intercambio EN INVENTARIO
+            //intercambio en el inventario
             slotInfoList[id_o] = destination;
             slotInfoList[id_o].id = id_o;
             slotInfoList[id_d] = origin;
             slotInfoList[id_d].id = id_d;
 
-            //intercambio EN LOS SLOTS BASADOS EN LOS CAMBIOS EN EL INVENTARIO
+            //intercambio en los slots(items) basado en los cambios en el inventario
 
             Slot originSlot = InventoryPanel.GetChild(id_o).GetComponent<Slot>();
             originSlot.slotInfo = slotInfoList[id_o];
@@ -199,7 +199,7 @@ public class Inventory : MonoBehaviour
     {
         public List<SlotInfo> slotInfoList;
     }
-
+    //funciones para hacer pruebas
     [ContextMenu("Test Add - itemId = 1")]
     public void TestAdd()
     {
