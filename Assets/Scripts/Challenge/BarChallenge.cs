@@ -6,8 +6,15 @@ public class BarChallenge : MonoBehaviour {
 
 	public Scrollbar bar;
 	public float total;
+    public Text instruction;
+    //public string challenge;
 
-	public void Progress(float value)
+    /*private void Start()
+    {
+        instruction.text = challenge;
+    }*/
+
+    public void Progress(float value)
 	{
 		total += value;
 		bar.size = total / 100f;

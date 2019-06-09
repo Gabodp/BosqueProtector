@@ -11,6 +11,8 @@ TagManager:
   - Mira
   - Especies
   - Pick
+  - lb_bird
+  - Clic
   layers:
   - Default
   - TransparentFX
