@@ -7,21 +7,21 @@ using UnityEngine.SceneManagement;
 public class MenuPausa : MonoBehaviour {
 
 	public static  bool IsPaused = false;
-	public GameObject MenuPausaUI;
-	public GameObject Panel;
+	public GameObject MenuPausaUI, panelEstrellas, Panel;
 	public SceneChanger sceneChanger;
 
 	void Update(){
 		bool bandera = ClickMouse.IsGalery;
-		if (!bandera){
+        bool bandera2 = ShowMochila.IsBackPack;
+		if (!bandera || !bandera2){
 			if (Input.GetKeyDown(KeyCode.Return)){
-			
 				if (IsPaused){
 					Continuar();
 				} else {
 					Pause();
 				}
 			}
+  
 		}
 	}
 

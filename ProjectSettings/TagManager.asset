@@ -6,6 +6,13 @@ TagManager:
   tags:
   - Spawn
   - Transition
+  - lb_groundTarget
+  - lb_perchTarget
+  - Mira
+  - Especies
+  - Pick
+  - lb_bird
+  - Clic
   layers:
   - Default
   - TransparentFX

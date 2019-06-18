@@ -43,8 +43,9 @@ public class GameManager : MonoBehaviour {
 		spawnArray = GameObject.FindGameObjectsWithTag("Spawn");
 		
 		try {
-			mapManager = GameObject.Find("MapManager").GetComponent<MapManager>();
-		} catch (System.Exception){
+            mapManager = GameObject.Find("MapManager").GetComponent<MapManager>();
+            
+        } catch (System.Exception){
 			Debug.Log("MapManager not present in this scene.");
 		}
 		

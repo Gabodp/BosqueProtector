@@ -12,27 +12,25 @@ public class ClickMouse : MonoBehaviour {
 
 	public GameObject Panel;
 	public GameObject Galeria;
+	private Galery GaleryScript;
 	public GameObject Panel3;
 	public static bool IsGalery = false;
-
-	public string titulo;
-	public string cuerpo;
-	public Text txttitulo;
-	public Text txtcuerpo;
-
+	public string specieName;
 
 	void Start () {
-		Panel.SetActive(false);		
+		Panel.SetActive(false);	
+		GaleryScript = Galeria.GetComponent<Galery>();	
 	}
 
-    void OnMouseDown ()
-    {
+    public void ShowGallery () {
     	if (MenuPausa.IsPaused == false) {
-	    	txttitulo.GetComponent<Text>().text = titulo;
-	    	txtcuerpo.GetComponent<Text>().text = cuerpo;
+			Cursor.lockState = CursorLockMode.None;
+			Cursor.visible = true;
 	        Panel.SetActive(true);
 	        Galeria.SetActive(true);
 	        Panel3.SetActive(false);
+			GaleryScript.name = specieName;
+			GaleryScript.visible = true;
 	        IsGalery = true;
 	        GameObject.FindGameObjectWithTag("Player").GetComponent<FirstPersonController>().enabled = false;
 			GameManager.instance.paused = true;
@@ -42,8 +40,9 @@ public class ClickMouse : MonoBehaviour {
 
 	void Update()
     {
-		if (Input.GetKeyUp(KeyCode.Q)) {
-			Continuar();
+		if (Input.GetKeyUp(KeyCode.Q))
+        {
+            Continuar();
         }
         
     }
@@ -59,6 +58,7 @@ public class ClickMouse : MonoBehaviour {
 	public void Continuar(){
 		Time.timeScale = 1f;
 		GameObject.FindGameObjectWithTag("Player").GetComponent<FirstPersonController>().enabled = true;
+		Galeria.GetComponent<Galery>().visible=false;
 		Cursor.visible = false;
 		Cursor.lockState = CursorLockMode.Locked;
 		Panel.SetActive(false);
@@ -66,10 +66,6 @@ public class ClickMouse : MonoBehaviour {
 		Galeria.SetActive(false);
 		IsGalery = false;
 		GameManager.instance.paused = false;
-	}
-
-	public bool GetIsGalery() {
-		return IsGalery;
 	}
     
 }

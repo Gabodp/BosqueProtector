@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.Runtime.InteropServices;
-
+using System;
 using UnityEngine.UI;
 
 public class SoundManager : MonoBehaviour {
@@ -19,10 +19,26 @@ public class SoundManager : MonoBehaviour {
 	}
 
 	public void PlayAudio(int id){
-		StartAudio(id);
+		try {
+			StartAudio(id);
+            Debug.Log("audio cargado");
+		} catch (EntryPointNotFoundException e) {
+			Debug.Log("No se pudo cargar audio");
+			Debug.Log(e.StackTrace);
+		}
 	}
 
 	public void PauseAudio(){
-		StopAudio();
+
+        try
+        {
+            StopAudio();
+        }
+        catch (EntryPointNotFoundException e)
+        {
+            Debug.Log("No se pudo cargar audio");
+            Debug.Log(e.StackTrace);
+        }
+        
 	}
 }

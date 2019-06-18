@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Runtime.InteropServices;
 using System;
@@ -42,10 +42,8 @@ public class Stations
 }
 
 public class MapManager : MonoBehaviour {
-	public Character character;
+    public Character character;
 	public Pin PinInicio;
-	public GameObject PanelEstacion;
-	public GameObject PanelSensor;
 	public Text Estacion;
 	public Text Cargando;
 	public GameObject Panel;
@@ -60,8 +58,8 @@ public class MapManager : MonoBehaviour {
 
 	[DllImport("__Internal")]
     private static extern string GetTemperature(int station_id);
-	
-	private void Start(){
+
+    private void Start(){
 		StartCoroutine(GetStations());
 		Panel.SetActive(false);
 		character.Iniciar(this, PinInicio);
@@ -71,8 +69,6 @@ public class MapManager : MonoBehaviour {
 
 	public void Update(){
 		if (character.IsMoving){
-			PanelEstacion.SetActive(true);
-			PanelSensor.SetActive(true);
 			return;
 		}
 		CheckForInput();
@@ -131,7 +127,6 @@ public class MapManager : MonoBehaviour {
 	                    diccionarioNombre.Add(dato.GameStation, dato.Name);
 	                }
 	            }
-
             }
         }
 	}
